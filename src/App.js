@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import Home from './Components/Home/Home'
+import Navbar2 from './Components/Navbar/Navbar2'
+import { useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
+
+  /*Toastify Notifs*/
+  const notifySentMessage = () => {
+    toast.success("Your message has been sent!", {
+      position: toast.POSITION.TOP_CENTER
+    });
+  };
+  
+  const [pageReady, setPageReady] = useState(false);
+
+  const pageIsReady = (status) => {
+    setPageReady(status);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <main>
+        <Navbar2 />
+        <Home 
+          pageReady={pageReady}
+          pageIsReady={pageIsReady}
+          notifySentMessage={notifySentMessage}
+        />
+      </main>
+      <ToastContainer />
+    </>
   );
 }
 
