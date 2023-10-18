@@ -6,7 +6,7 @@ import { FaBars } from "react-icons/fa"
 import { FaXmark } from "react-icons/fa6"
 import logo from '../../Assets/Images/Logo-3.png'
 
-const Navbar2 = ( {contactPage}) => {
+const Navbar2 = () => {
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -56,7 +56,7 @@ const Navbar2 = ( {contactPage}) => {
 
           {/*Extra Menu Button */}
           <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:align-middle">
-            <a href="https://drive.google.com/u/0/uc?id=1W991daIvsKlA8gUl9JPM2U9XLxrKo1Fi&export=download" target="_blank" rel="noreferrer" class="Btn bg-none hover:bg-yellow-400 rounded-lg group">
+            <a href="https://drive.google.com/u/0/uc?id=1D-C6yaQOLmdW55w5BInDmT7DrjR6qQuQ&export=download" target="_blank" rel="noreferrer" class="Btn bg-none hover:bg-yellow-400 rounded-lg group">
               <div class="sign">
                 <FiDownloadCloud className="h-6 w-6 text-blue-500 group-hover:text-zinc-950"/>
               </div>

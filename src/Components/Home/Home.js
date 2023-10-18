@@ -355,7 +355,7 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
           </div>
           
           <div className="flex justify-end w-full mt-4">
-            <a href="https://drive.google.com/u/0/uc?id=1W991daIvsKlA8gUl9JPM2U9XLxrKo1Fi&export=download"
+            <a href="https://drive.google.com/u/0/uc?id=1D-C6yaQOLmdW55w5BInDmT7DrjR6qQuQ&export=download"
               class="rounded-lg relative w-fit h-10 cursor-pointer flex items-center bg-yellow-400 group"
             >
               <span class="text-zinc-950 opacity-100 text-md font-medium ml-4 mr-11 group-hover:opacity-0 transition-all ease-in-out duration-300">Download my CV</span>
