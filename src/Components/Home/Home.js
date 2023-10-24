@@ -187,7 +187,7 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
 
         <div data-aos="fade-left" data-aos-duration="600" data-aos-easing="ease-in-sine" className="flex flex-col w-full p-3 justify-center items-center align-middle max-w-3xl lg:items-start lg:px-8 lg:w-2/3">
           <h3 className="text-4xl text-white font-bold text-center lg:text-left">Nice to meet you!</h3>
-          <p className="text-lg text-white py-3 pt-8 max-w-3xl text-center lg:max-w-none lg:text-left">Since I started my career as a Web Designer more than 3 years ago, I've worked on a range of projects (including landing pages, microsites, email templates, social cards, and others) and collaborated with wonderful people to create digital goods for both commercial and consumer use. I'm quiet confident, innately curious, and constantly seeking ways on improving my creativity and programming skills.</p>
+          <p className="text-lg text-white py-3 pt-8 max-w-3xl text-center lg:max-w-none lg:text-left">I started my career as a Web Designer more than 3 years ago, I've worked on a range of projects (including landing pages, microsites, email templates, social cards, and others) and collaborated with wonderful people to create digital goods for both commercial and consumer use. I'm quiet confident, innately curious, and constantly seeking ways on improving my creativity and programming skills.</p>
           
           <div className="bg-slate-900 flex flex-col w-full max-w-3xl rounded-xl mt-3">
             <div className=" bg-neutral-300  py-2 pl-5 pr-6 rounded-br-xl rounded-tl-xl w-fit font-bold uppercase">
@@ -355,7 +355,7 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
           </div>
           
           <div className="flex justify-end w-full mt-4">
-            <a href="https://drive.google.com/u/0/uc?id=1D-C6yaQOLmdW55w5BInDmT7DrjR6qQuQ&export=download"
+            <a href="https://drive.google.com/u/0/uc?id=1Y6dgcsIT8u-ebaebrN_z_R_1r1cDPFm8&export=download" target="_blank" rel="noreferrer"
               class="rounded-lg relative w-fit h-10 cursor-pointer flex items-center bg-yellow-400 group"
             >
               <span class="text-zinc-950 opacity-100 text-md font-medium ml-4 mr-11 group-hover:opacity-0 transition-all ease-in-out duration-300">Download my CV</span>
