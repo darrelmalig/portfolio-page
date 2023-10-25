@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import DaMath from '../../Assets/Images/DaMath.webp'
 import Dota2Heroes from '../../Assets/Images/Dota-2-Heroes.png'
-import YoutubeClone from '../../Assets/Images/Youtube-clone.png'
+import Pokedex from '../../Assets/Images/Pokedex.png'
 import headerHero from '../../Assets/Images/Portfolio-Hero-Image.png'
 import aboutMeImage from '../../Assets/Images/Portfolio-Body-Image.png'
 import { DiHtml5, DiJavascript1, DiCss3, DiGit, DiGithubBadge, DiReact, DiWordpress } from "react-icons/di"
@@ -51,10 +51,10 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
       },
       {
         id: 3,
-        projectName: "Youtube Clone",
-        projectDesc: "This is the first app that I've made after learning React JS.",
-        projectLink: "https://drive.google.com/drive/folders/1l-br0WG6LzjhUI0BlgCokvihmqE-WELM?usp=sharing",
-        projectImage: YoutubeClone,
+        projectName: "Pokedex",
+        projectDesc: "Classic Pokedex for avid Pokemon fans.",
+        projectLink: "#",
+        projectImage: Pokedex,
         projectTech: [
           <DiHtml5 className="w-5 h-auto" />,
           <DiCss3 className="w-5 h-auto" />,
