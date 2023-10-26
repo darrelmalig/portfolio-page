@@ -79,7 +79,7 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
   /*Checking if all elements are already loaded*/
   useEffect(() => {
     const loadElements = async () => {
-        const mainPage = await document.getElementById("home-page");
+        const mainPage = await document.getElementById("home");
         mainPage.style.display = "block";
         pageIsReady(true);
     }
@@ -122,12 +122,12 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
       </div>
     }
 
-    <main id="home-page" className="hidden">
+    <main id="home" className="hidden">
 
-      <a id="btn-back-to-top" className={status ? "block" : "hidden"} href="#home-page">
+      <a id="btn-back-to-top" className={status ? "block" : "hidden"} href="#home">
         <button
           type="button"
-          className="!fixed bottom-5 right-5 block rounded-full bg-yellow-400 p-3 text-xs font-medium uppercase leading-tight text-zinc-900 opacity-50 shadow-md transition duration-150 ease-in-out hover:bg-yellow-500 hover:shadow-lg hover:opacity-100 hover:scale-105 z-50">
+          className="!fixed bottom-5 right-5 block rounded-xl bg-yellow-400 p-3 text-xs font-medium uppercase leading-tight text-zinc-900 opacity-50 shadow-md transition duration-150 ease-in-out hover:bg-yellow-500 hover:shadow-lg hover:opacity-100 hover:scale-105 z-50">
           <svg
             aria-hidden="true"
             focusable="false"
@@ -180,7 +180,7 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
         </div>      
       </div> 
 
-      <div id="about-section" className="bg-blue-600 flex flex-col gap-5 gap-y-10 px-4 py-10  h-full min-h-screen w-full justify-center items-center align-middle lg:py-32 lg:flex-row magicpattern">
+      <div id="about" className="bg-blue-600 flex flex-col gap-5 gap-y-10 px-4 py-10  h-full min-h-screen w-full justify-center items-center align-middle lg:py-32 lg:flex-row magicpattern">
         <div data-aos="fade-right" data-aos-duration="600" data-aos-easing="ease-in-sine" className="flex w-full justify-center items-center align-middle px-10 lg:px-1 lg:max-w-3xl lg:w-1/3">
           <img src={aboutMeImage} alt="about-me" className=" drop-shadow-xl drop rounded-xl w-full max-w-sm lg:max-w-lg" />
         </div>
@@ -368,7 +368,7 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
         </div>
       </div>
 
-      <div id="projects-section" className="projects flex flex-col p-5 py-10 items-center justify-center w-full min-h-screen h-full">
+      <div id="projects" className="projects flex flex-col p-5 py-10 items-center justify-center w-full min-h-screen h-full">
         <div data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-sine" className="flex flex-col justify-center align-middle items-center gap-2 max-w-2xl">
           <h3 className="text-4xl text-zinc-700 text-center font-bold" >My Projects</h3>
           <p className="text-md sm:text-lg text-center text-zinc-700 py-1 sm:py-4"> Here are some of the projects I've worked on.</p>
@@ -400,7 +400,7 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
         </div>
       </div>
 
-      <div id="contact-section" className="flex justify-center w-full px-3 lg:px-5 py-3">
+      <div id="contact" className="flex justify-center w-full px-3 lg:px-5 py-3">
         <Contact
           notifySentMessage={notifySentMessage}
         />

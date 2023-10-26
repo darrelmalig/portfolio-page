@@ -11,10 +11,9 @@ const Navbar2 = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     const navigation = [
-        { name: 'Home', routePath: "/", href:"/#home-page" , id:1},
-        { name: 'About', routePath: "/", href:"/#about-section" , id:2},
-        { name: 'Projects', routePath: "/", href:"/#projects-section" , id:3},
-        { name: 'Contact', routePath: "/", href:"/#contact-section" , id:4}
+        { name: 'About', routePath: "/", href:"/#about" , id:1},
+        { name: 'Projects', routePath: "/", href:"/#projects" , id:2},
+        { name: 'Contact', routePath: "/", href:"/#contact" , id:3}
     ]
 
   return (
@@ -24,9 +23,9 @@ const Navbar2 = () => {
         <nav className="flex items-center justify-end p-6 lg:px-8" aria-label="Global">
           {/*Nav Logo*/}
           <div className="hidden lg:flex lg:flex-1">
-            <a href="/#home-page" className="-m-1.5 p-1.5">
+            <div className="-m-1.5 p-1.5">
               <img src={logo} alt="logo" className="h-14 w-auto text-blue-500 hover:animate-pulse" />
-            </a>
+            </div>
           </div>
 
           {/*Burger Menu Button */}
