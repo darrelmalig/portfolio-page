@@ -23,7 +23,7 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
       {
         id: 1,
         projectName: "DaMath",
-        projectDesc: "A mobile board game that I created for my Capstone project in college.",
+        projectDesc: "DaMath is a mobile board game that I created for my Capstone project in college.",
         projectLink: "https://drive.google.com/drive/folders/1l-br0WG6LzjhUI0BlgCokvihmqE-WELM?usp=sharing",
         projectImage: DaMath,
         projectTech: [
@@ -36,7 +36,7 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
       {
         id: 2,
         projectName: "Dota2 Heroes",
-        projectDesc: "Cloned Dota 2 Heroes page that fetchs data from the Opendota API.",
+        projectDesc: "Cloned Dota 2 Heroes page that uses the Opendota API to fetch/request data.",
         projectLink: "https://dota-2-heroes.netlify.app/",
         projectImage: Dota2Heroes,
         projectTech: [
@@ -52,7 +52,7 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
       {
         id: 3,
         projectName: "Pokedex",
-        projectDesc: "Classic Pokedex for avid Pokemon fans.",
+        projectDesc: "A Web Pokedex page where you can browse and check data of pokemons from all generations",
         projectLink: "#",
         projectImage: Pokedex,
         projectTech: [
@@ -368,10 +368,10 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
         </div>
       </div>
 
-      <div id="projects-section" className="projects flex flex-col p-5 items-center justify-center w-full min-h-screen h-full">
+      <div id="projects-section" className="projects flex flex-col p-5 py-10 items-center justify-center w-full min-h-screen h-full">
         <div data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-sine" className="flex flex-col justify-center align-middle items-center gap-2 max-w-2xl">
-          <h3 className="text-5xl text-zinc-700 text-center font-bold" >My Projects</h3>
-          <p className="text-lg text-center text-zinc-700 py-4"> Here are some of the projects I've worked on.</p>
+          <h3 className="text-4xl text-zinc-700 text-center font-bold" >My Projects</h3>
+          <p className="text-md sm:text-lg text-center text-zinc-700 py-1 sm:py-4"> Here are some of the projects I've worked on.</p>
         </div>
 
         <div data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-sine" className="max-w-7xl py-5 pt-10">
@@ -379,7 +379,7 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
             {
               projects.map((project) => (
                 <a href={project.projectLink} key={project.id} target="_blank" rel="noreferrer">
-                  <li style={{ backgroundImage: `url(${project.projectImage})` }} className="text-white flex justify-end items-end bg-cover w-80 h-80 rounded-lg transition-all ease-in-out duration-500 overflow-hidden shadow-md drop-shadow-md  shadow-slate-500 bg-gree hover:cursor-pointer group relative" >
+                  <li style={{ backgroundImage: `url(${project.projectImage})` }} className="text-white flex justify-end items-end bg-cover bg-no-repeat bg-center w-80 h-80 rounded-lg transition-all ease-in-out duration-500 overflow-hidden shadow-md drop-shadow-md  shadow-slate-500 bg-gree hover:cursor-pointer group relative" >
                     <div className={`absolute ${project.projectStatus === "Published" ? "bg-green-500" : "bg-orange-500"} top-0 right-0 py-1.5 px-2.5 rounded-bl-lg bg-opacity-90 font-semibold text-sm z-30`}>{project.projectStatus}</div>
                     <div className="project-gradient-bg opacity-0 flex flex-col p-6 h-full transition-all ease-in-out duration-800 rounded-b-lg justify-end w-full group-hover:opacity-100">
                       <h4 className="text-3xl font-semibold mb-80 opacity-0 transition-all ease-in-out duration-500 py-1 group-hover:opacity-100 group-hover:mb-0 font-agency-fb">

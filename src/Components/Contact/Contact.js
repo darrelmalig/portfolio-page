@@ -20,10 +20,10 @@ const Contact = ({notifySentMessage}) => {
     }
 
   return (
-    <div className=" flex flex-col justify-center items-center align-middle h-auto w-full max-w-7xl px-5 py-16 magicpattern rounded-lg md:rounded-xl lg:rounded-2xl ">
+    <div className=" flex flex-col justify-center items-center align-middle h-auto w-full max-w-7xl px-5 py-10 md:py-16 magicpattern rounded-lg md:rounded-xl lg:rounded-2xl ">
       <div className="mx-auto text-center w-full max-w-xl">
-        <h3 className="text-white text-center text-3xl font-bold">Interested in collaborating with me?</h3>
-        <h3 className="text-white pt-3 text-center text-xl font-normal">I’m always open to discussing product design work or partnership opportunities.
+        <h3 className="text-white text-center text-2xl md:text-3xl font-bold">Interested in collaborating with me?</h3>
+        <h3 className="text-white pt-3 text-center text-md sm:text:lg md:text-xl font-normal">I’m always open to discussing product design work or partnership opportunities.
         </h3>
       </div>
       <form onSubmit={sendEmail} className="mx-auto mt-6 w-full max-w-xl">
@@ -83,8 +83,8 @@ const Contact = ({notifySentMessage}) => {
                 onChange={(e) => {
                     setMessage(e.target.value);
                 }}
-                rows={4}
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-400 sm:text-sm sm:leading-6"
+                rows={3}
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-400 sm:text-sm sm:leading-6 resize-none"
                 defaultValue={''}
               />
             </div>
