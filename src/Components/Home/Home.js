@@ -89,9 +89,6 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
     }, 10000 );
     
   }, [pageIsReady])
-  
-  /*Separate Each letter of name for future animations*/
-  const name = ["D","a","r","r","e","l"];
 
   /*Checking for scroll pos for back to top button */
   var height = window.outerHeight;
@@ -124,10 +121,10 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
 
     <main id="home" className="hidden">
 
-      <a id="btn-back-to-top" className={status ? "block" : "hidden"} href="#home">
+      <a id="btn-back-to-top" className={`transition-all ease-in-out duration-500 ${status ? "opacity-100" : "opacity-0"}`} href="#home">
         <button
           type="button"
-          className="!fixed bottom-5 right-5 block rounded-xl bg-yellow-400 p-3 text-xs font-medium uppercase leading-tight text-zinc-900 opacity-50 shadow-md transition duration-150 ease-in-out hover:bg-yellow-500 hover:shadow-lg hover:opacity-100 hover:scale-105 z-50">
+          className="!fixed bottom-5 right-5 block rounded-xl bg-yellow-400 p-3 text-xs font-medium uppercase leading-tight text-zinc-900 opacity-50 shadow-md transition-all ease-in-out duration-300 hover:bg-yellow-500 hover:shadow-lg hover:opacity-100 hover:scale-105 z-50">
           <svg
             aria-hidden="true"
             focusable="false"
@@ -151,13 +148,7 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
           <h1 className="text-4xl flex flex-row font-semi-bold text-zinc-700 sm:text-6xl lg:text-7xl font-agency">
             I AM&nbsp;
             <strong className="text-blue-600 flex flex-row ">
-              {
-                name.map((element, index) => {
-                  return (
-                    <p key={index} className="transition-all ease-in-out duration-300 hover:scale-110 hover:animate-pulse ">{element.toUpperCase()}</p>
-                  )
-                })
-              }
+              DARREL
             </strong>
           </h1>
           
@@ -175,7 +166,7 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
           </div>
 
         </div>
-        <div className="flex justify-center w-full h-auto text-white lg:max-w-4xl">
+        <div  className="flex justify-center w-full h-auto text-white lg:max-w-4xl">
           <img alt="hero" src={headerHero} className="w-full py-5 px-16 h-auto max-w-2xl lg:px-10 lg:max-w-4xl" />
         </div>      
       </div> 
@@ -190,21 +181,21 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
           <p className="text-lg text-white py-3 pt-8 max-w-3xl text-center lg:max-w-none lg:text-left">I started my career as a Web Designer more than 3 years ago, I've worked on a range of projects (including landing pages, microsites, email templates, social cards, and others) and collaborated with wonderful people to create digital goods for both commercial and consumer use. I'm quiet confident, innately curious, and constantly seeking ways on improving my creativity and programming skills.</p>
           
           <div className="bg-slate-900 flex flex-col w-full max-w-3xl rounded-xl mt-3">
-            <div className=" bg-neutral-300  py-2 pl-5 pr-6 rounded-br-xl rounded-tl-xl w-fit font-bold uppercase">
-              My Skills
+            <div className=" bg-slate-50  py-2 pl-5 pr-6 rounded-br-xl rounded-tl-xl w-fit font-bold uppercase">
+              Technical Skills
             </div>
             <div className="flex flex-row flex-wrap  justify-center px-4 py-1 min-h-max h-auto w-full text-white rounded-xl my-3 ">
               <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
                 <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
-                  <DiHtml5 className="text-orange-600 w-5 lg:w-6 h-auto" />
+                  <DiHtml5 className="text-orange-500 w-5 lg:w-6 h-auto" />
                   HTML5
                 </div>
                 <div className="flex flex-row gap-x-1 justify-center py-2">
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarEmpty className="text-yellow-500 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarEmpty className="text-gray-300 w-3 h-auto" />
                 </div>
               </div>
               <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
@@ -213,11 +204,11 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
                   CSS3
                 </div>
                 <div className="flex flex-row gap-x-1 justify-center py-2">
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarEmpty className="text-yellow-500 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarEmpty className="text-gray-300 w-3 h-auto" />
                 </div>
               </div>
               <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
@@ -226,11 +217,11 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
                   Javascript
                 </div>
                 <div className="flex flex-row gap-x-1 justify-center py-2">
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarEmpty className="text-yellow-500 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarEmpty className="text-gray-300 w-3 h-auto" />
                 </div>
               </div>
               <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
@@ -239,11 +230,11 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
                   React JS
                 </div>
                 <div className="flex flex-row gap-x-1 justify-center py-2">
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarHalf className="text-yellow-500 w-3 h-auto" />
-                  <ImStarEmpty className="text-yellow-500 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarHalf className="text-gray-300 w-3 h-auto" />
+                  <ImStarEmpty className="text-gray-300 w-3 h-auto" />
                 </div>
               </div>
               <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
@@ -252,11 +243,11 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
                   Tailwind
                 </div>
                 <div className="flex flex-row gap-x-1 justify-center py-2">
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarHalf className="text-yellow-500 w-3 h-auto" />
-                  <ImStarEmpty className="text-yellow-500 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarHalf className="text-gray-300 w-3 h-auto" />
+                  <ImStarEmpty className="text-gray-300 w-3 h-auto" />
                 </div>
               </div>
               <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
@@ -265,11 +256,11 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
                   Wordpress
                 </div>
                 <div className="flex flex-row gap-x-1 justify-center py-2">
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarEmpty className="text-yellow-500 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarEmpty className="text-gray-300 w-3 h-auto" />
                 </div>
               </div>
               <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
@@ -278,11 +269,11 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
                   Git
                 </div>
                 <div className="flex flex-row gap-x-1 justify-center py-2">
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarHalf className="text-yellow-500 w-3 h-auto" />
-                  <ImStarEmpty className="text-yellow-500 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarHalf className="text-gray-300 w-3 h-auto" />
+                  <ImStarEmpty className="text-gray-300 w-3 h-auto" />
                 </div>
               </div>
               <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
@@ -291,11 +282,11 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
                   GitHub
                 </div>
                 <div className="flex flex-row gap-x-1 justify-center py-2">
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarEmpty className="text-yellow-500 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarEmpty className="text-gray-300 w-3 h-auto" />
                 </div>
               </div>
               <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
@@ -304,11 +295,11 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
                   XD
                 </div>
                 <div className="flex flex-row gap-x-1 justify-center py-2">
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarEmpty className="text-yellow-500 w-3 h-auto" />
-                  <ImStarEmpty className="text-yellow-500 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarEmpty className="text-gray-300 w-3 h-auto" />
+                  <ImStarEmpty className="text-gray-300 w-3 h-auto" />
                 </div>
               </div>
               <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
@@ -317,11 +308,11 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
                   Illustrator
                 </div>
                 <div className="flex flex-row gap-x-1 justify-center py-2">
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarEmpty className="text-yellow-500 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarEmpty className="text-gray-300 w-3 h-auto" />
                 </div>
               </div>
               <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
@@ -330,11 +321,11 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
                   Photoshop
                 </div>
                 <div className="flex flex-row gap-x-1 justify-center py-2">
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarEmpty className="text-yellow-500 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarEmpty className="text-gray-300 w-3 h-auto" />
                 </div>
               </div>
               <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
@@ -343,11 +334,11 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
                   Gamemaker
                 </div>
                 <div className="flex flex-row gap-x-1 justify-center py-2">
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarFull className="text-yellow-500 w-3 h-auto" />
-                  <ImStarEmpty className="text-yellow-500 w-3 h-auto" />
-                  <ImStarEmpty className="text-yellow-500 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarFull className="text-gray-300 w-3 h-auto" />
+                  <ImStarEmpty className="text-gray-300 w-3 h-auto" />
+                  <ImStarEmpty className="text-gray-300 w-3 h-auto" />
                 </div>
               </div>
 
@@ -400,7 +391,7 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
         </div>
       </div>
 
-      <div id="contact" className="flex justify-center w-full px-3 lg:px-5 py-3">
+      <div id="contact" data-aos="fade-up" className="flex justify-center w-full px-3 lg:px-5 py-3">
         <Contact
           notifySentMessage={notifySentMessage}
         />
