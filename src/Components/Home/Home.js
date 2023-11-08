@@ -53,7 +53,7 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
         id: 3,
         projectName: "Pokedex",
         projectDesc: "A Web Pokedex page where you can browse and check data of pokemons from all generations",
-        projectLink: "#",
+        projectLink: "#projects",
         projectImage: Pokedex,
         projectTech: [
           <DiHtml5 className="w-5 h-auto" />,
@@ -368,8 +368,8 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
         <div data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-sine" className="max-w-7xl py-5 pt-10">
           <ul className="flex flex-wrap flex-row gap-5 justify-center items-center align-middle ">
             {
-              projects.map((project) => (
-                <a href={project.projectLink} key={project.id} target="_blank" rel="noreferrer">
+              projects.map((project,index) => (
+                <a href={project.projectLink} key={project.id} target={`${project.id===3?"":"_blank"}`} rel="noreferrer">
                   <li style={{ backgroundImage: `url(${project.projectImage})` }} className="text-white flex justify-end items-end bg-cover bg-no-repeat bg-center w-80 h-80 rounded-lg transition-all ease-in-out duration-500 overflow-hidden shadow-md drop-shadow-md  shadow-slate-500 bg-gree hover:cursor-pointer group relative" >
                     <div className={`absolute ${project.projectStatus === "Published" ? "bg-green-500" : "bg-orange-500"} top-0 right-0 py-1.5 px-2.5 rounded-bl-lg bg-opacity-90 font-semibold text-sm z-30`}>{project.projectStatus}</div>
                     <div className="project-gradient-bg opacity-0 flex flex-col p-6 h-full transition-all ease-in-out duration-800 rounded-b-lg justify-end w-full group-hover:opacity-100">
