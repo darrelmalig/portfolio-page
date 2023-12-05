@@ -15,6 +15,7 @@ function App() {
   };
   
   const [pageReady, setPageReady] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const pageIsReady = (status) => {
     setPageReady(status);
@@ -23,8 +24,12 @@ function App() {
   return (
     <>
       <main>
-        <Navbar2 />
+        <Navbar2
+          mobileMenuOpen={mobileMenuOpen}
+          setMobileMenuOpen={setMobileMenuOpen}
+        />
         <Home 
+          mobileMenuOpen={mobileMenuOpen}
           pageReady={pageReady}
           pageIsReady={pageIsReady}
           notifySentMessage={notifySentMessage}

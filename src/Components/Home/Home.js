@@ -27,9 +27,9 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
         projectLink: "https://drive.google.com/drive/folders/1l-br0WG6LzjhUI0BlgCokvihmqE-WELM?usp=sharing",
         projectImage: DaMath,
         projectTech: [
-          <SiGamemaker className="w-5 h-auto" />,
-          <SiAdobephotoshop className="w-5 h-auto" />,
-          <SiAdobeillustrator className="w-5 h-auto" />
+          <SiGamemaker key="1" className="w-5 h-auto" />,
+          <SiAdobephotoshop key="2" className="w-5 h-auto" />,
+          <SiAdobeillustrator key="3" className="w-5 h-auto" />
         ],
         projectStatus: "Published"
       },
@@ -40,12 +40,12 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
         projectLink: "https://dota-2-heroes.netlify.app/",
         projectImage: Dota2Heroes,
         projectTech: [
-          <DiHtml5 className="w-5 h-auto" />,
-          <DiCss3 className="w-5 h-auto" />,
-          <SiTailwindcss className="w-5 h-auto" />,
-          <DiReact className="w-5 h-auto" />,
-          <DiGithubBadge className="w-5 h-auto" />,
-          <AiFillApi className="w-5 h-auto" />
+          <DiHtml5 key="4" className="w-5 h-auto" />,
+          <DiCss3 key="5" className="w-5 h-auto" />,
+          <SiTailwindcss key="6" className="w-5 h-auto" />,
+          <DiReact key="7" className="w-5 h-auto" />,
+          <DiGithubBadge key="8" className="w-5 h-auto" />,
+          <AiFillApi key="9" className="w-5 h-auto" />
         ],
         projectStatus: "Published"
       },
@@ -56,13 +56,13 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
         projectLink: "#projects",
         projectImage: Pokedex,
         projectTech: [
-          <DiHtml5 className="w-5 h-auto" />,
-          <DiCss3 className="w-5 h-auto" />,
-          <DiJavascript1 className="w-5 h-auto" />,
-          <SiTailwindcss className="w-5 h-auto" />,
-          <DiReact className="w-5 h-auto" />,
-          <DiGithubBadge className="w-5 h-auto" />,
-          <AiFillApi className="w-5 h-auto" />
+          <DiHtml5 key="10" className="w-5 h-auto" />,
+          <DiCss3 key="11" className="w-5 h-auto" />,
+          <DiJavascript1 key="12" className="w-5 h-auto" />,
+          <SiTailwindcss key="13" className="w-5 h-auto" />,
+          <DiReact key="14" className="w-5 h-auto" />,
+          <DiGithubBadge key="15" className="w-5 h-auto" />,
+          <AiFillApi key="16" className="w-5 h-auto" />
         ],
         projectStatus: "Developing"
       }
@@ -140,226 +140,228 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
         </button>
       </a>
 
-      <div className="flex flex-col-reverse gap-y-2 py-5 pb-10 w-full justify-center items-center align-middle min-h-screen lg:pb-5 lg:flex-row lg:gap-0 lg:justify-evenly">
-        <div className="flex flex-col justify-center items-center w-full h-auto gap-2 py-10 px-8 text-white text-center lg:py-5 lg:items-start lg:max-w-3xl lg:text-left">
-          
-          <h1 className="text-4xl font-semi-bold text-zinc-700 sm:text-6xl lg:text-7xl  font-agency">HI!</h1>
-          
-          <h1 className="text-4xl flex flex-row font-semi-bold text-zinc-700 sm:text-6xl lg:text-7xl font-agency">
-            I AM&nbsp;
-            <strong className="text-blue-600 flex flex-row ">
-              DARREL
-            </strong>
-          </h1>
-          
-          <h2 className="text-3xl text-zinc-700  font-agency-fb">WEB DESIGNER | FRONT-END DEVELOPER</h2>
-          <p className=" text-lg mt-2 text-zinc-700 max-w-3xl lg:max-w-none ">I enjoy designing and coding things that are stunningly simple.</p>
-          <div className=" text-slate-500 pt-3 flex flex-row gap-x-1">
-            <DiHtml5 className="w-7 h-auto opacity-50 transition-all ease-in-out duration-300 hover:opacity-100" />
-            <DiCss3 className="w-7 h-auto opacity-50 transition-all ease-in-out duration-300 hover:opacity-100" />
-            <DiJavascript1 className="w-7 h-auto opacity-50 transition-all ease-in-out duration-300 hover:opacity-100" />
-            <DiReact className="w-7 h-auto opacity-50 transition-all ease-in-out duration-300 hover:opacity-100" />
-            <SiTailwindcss className="w-7 h-auto opacity-50 transition-all ease-in-out duration-300 hover:opacity-100" />
-            <SiAdobeillustrator className="w-6 h-auto opacity-50 transition-all ease-in-out duration-300 hover:opacity-100" />
-            <DiGit className="w-7 h-auto opacity-50 transition-all ease-in-out duration-300 hover:opacity-100" />
-            <DiGithubBadge className="w-7 h-auto opacity-50 transition-all ease-in-out duration-300 hover:opacity-100" />
-          </div>
-
-        </div>
-        <div  className="flex justify-center w-full h-auto text-white lg:max-w-4xl">
-          <img alt="hero" src={headerHero} className="w-full py-5 px-16 h-auto max-w-2xl lg:px-10 lg:max-w-4xl" />
-        </div>      
-      </div> 
-
-      <div id="about" className="bg-blue-600 flex flex-col gap-5 gap-y-10 px-4 py-10  h-full min-h-screen w-full justify-center items-center align-middle lg:py-32 lg:flex-row magicpattern">
-        <div data-aos="fade-right" data-aos-duration="600" data-aos-easing="ease-in-sine" className="flex w-full justify-center items-center align-middle px-10 lg:px-1 lg:max-w-3xl lg:w-1/3">
-          <img src={aboutMeImage} alt="about-me" className=" drop-shadow-xl drop rounded-xl w-full max-w-sm lg:max-w-lg" />
-        </div>
-
-        <div data-aos="fade-left" data-aos-duration="600" data-aos-easing="ease-in-sine" className="flex flex-col w-full p-3 justify-center items-center align-middle max-w-3xl lg:items-start lg:px-8 lg:w-2/3">
-          <h3 className="text-4xl text-white font-bold text-center lg:text-left">Nice to meet you!</h3>
-          <p className="text-lg text-white py-3 pt-8 max-w-3xl text-center lg:max-w-none lg:text-left">I started my career as a Web Designer more than 3 years ago, I've worked on a range of projects (including landing pages, microsites, email templates, social cards, and others) and collaborated with wonderful people to create digital goods for both commercial and consumer use. I'm quiet confident, innately curious, and constantly seeking ways on improving my creativity and programming skills.</p>
-          
-          <div className="bg-slate-900 flex flex-col w-full max-w-3xl rounded-xl mt-3">
-            <div className=" bg-slate-50  py-2 pl-5 pr-6 rounded-br-xl rounded-tl-xl w-fit font-bold uppercase">
-              Technical Skills
+      <div className="flex mx-auto w-full max-w-[2000px] min-h-[950px] md:px-6 ">
+        <div className="flex flex-col-reverse gap-y-2 py-5 pb-10 w-full justify-center items-center align-middle lg:pb-5 lg:flex-row lg:gap-0 lg:justify-between">
+          <div className="flex flex-col justify-center items-center w-full h-auto gap-2 py-10 px-8 text-white text-center lg:py-5 lg:items-start lg:max-w-3xl lg:text-left">
+            
+            <h1 className="text-4xl font-semi-bold text-zinc-700 sm:text-6xl lg:text-7xl  font-agency">HI!</h1>
+            
+            <h1 className="text-4xl flex flex-row font-semi-bold text-zinc-700 sm:text-6xl lg:text-7xl font-agency">
+              I AM&nbsp;
+              <strong className="text-blue-600 flex flex-row ">
+                DARREL
+              </strong>
+            </h1>
+            
+            <h2 className="text-3xl text-zinc-700  font-agency-fb">WEB DESIGNER | FRONT-END DEVELOPER</h2>
+            <p className=" text-lg mt-2 text-zinc-700 max-w-3xl lg:max-w-none ">I enjoy designing and coding things that are stunningly simple.</p>
+            <div className=" text-slate-500 pt-3 flex flex-row gap-x-1">
+              <DiHtml5 className="w-7 h-auto opacity-50 transition-all ease-in-out duration-300 hover:opacity-100" />
+              <DiCss3 className="w-7 h-auto opacity-50 transition-all ease-in-out duration-300 hover:opacity-100" />
+              <DiJavascript1 className="w-7 h-auto opacity-50 transition-all ease-in-out duration-300 hover:opacity-100" />
+              <DiReact className="w-7 h-auto opacity-50 transition-all ease-in-out duration-300 hover:opacity-100" />
+              <SiTailwindcss className="w-7 h-auto opacity-50 transition-all ease-in-out duration-300 hover:opacity-100" />
+              <SiAdobeillustrator className="w-6 h-auto opacity-50 transition-all ease-in-out duration-300 hover:opacity-100" />
+              <DiGit className="w-7 h-auto opacity-50 transition-all ease-in-out duration-300 hover:opacity-100" />
+              <DiGithubBadge className="w-7 h-auto opacity-50 transition-all ease-in-out duration-300 hover:opacity-100" />
             </div>
-            <div className="flex flex-row flex-wrap  justify-center px-4 py-1 min-h-max h-auto w-full text-white rounded-xl my-3 ">
-              <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
-                <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
-                  <DiHtml5 className="text-orange-500 w-5 lg:w-6 h-auto" />
-                  HTML5
-                </div>
-                <div className="flex flex-row gap-x-1 justify-center py-2">
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarEmpty className="text-gray-300 w-3 h-auto" />
-                </div>
-              </div>
-              <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
-                <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
-                  <DiCss3 className="text-blue-500 w-5 lg:w-6 h-auto" />
-                  CSS3
-                </div>
-                <div className="flex flex-row gap-x-1 justify-center py-2">
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarEmpty className="text-gray-300 w-3 h-auto" />
-                </div>
-              </div>
-              <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
-                <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
-                  <DiJavascript1 className="text-yellow-500 w-5 lg:w-6 h-auto" />
-                  Javascript
-                </div>
-                <div className="flex flex-row gap-x-1 justify-center py-2">
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarEmpty className="text-gray-300 w-3 h-auto" />
-                </div>
-              </div>
-              <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
-                <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
-                  <DiReact className=" text-cyan-400 w-5 lg:w-6 h-auto" />
-                  React JS
-                </div>
-                <div className="flex flex-row gap-x-1 justify-center py-2">
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarHalf className="text-gray-300 w-3 h-auto" />
-                  <ImStarEmpty className="text-gray-300 w-3 h-auto" />
-                </div>
-              </div>
-              <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
-                <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
-                  <SiTailwindcss className=" text-sky-400 w-5 lg:w-6 h-auto" />
-                  Tailwind
-                </div>
-                <div className="flex flex-row gap-x-1 justify-center py-2">
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarHalf className="text-gray-300 w-3 h-auto" />
-                  <ImStarEmpty className="text-gray-300 w-3 h-auto" />
-                </div>
-              </div>
-              <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
-                <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
-                  <DiWordpress className=" text-sky-500 w-5 lg:w-6 h-auto" />
-                  Wordpress
-                </div>
-                <div className="flex flex-row gap-x-1 justify-center py-2">
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarEmpty className="text-gray-300 w-3 h-auto" />
-                </div>
-              </div>
-              <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
-                <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
-                  <DiGit className=" text-red-500 w-5 lg:w-6 h-auto" />
-                  Git
-                </div>
-                <div className="flex flex-row gap-x-1 justify-center py-2">
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarHalf className="text-gray-300 w-3 h-auto" />
-                  <ImStarEmpty className="text-gray-300 w-3 h-auto" />
-                </div>
-              </div>
-              <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
-                <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
-                  <DiGithubBadge className=" text-gray-300 w-5 lg:w-6 h-auto" />
-                  GitHub
-                </div>
-                <div className="flex flex-row gap-x-1 justify-center py-2">
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarEmpty className="text-gray-300 w-3 h-auto" />
-                </div>
-              </div>
-              <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
-                <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
-                <SiAdobexd className=" text-pink-600 w-4 lg:w-5 h-auto" />
-                  XD
-                </div>
-                <div className="flex flex-row gap-x-1 justify-center py-2">
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarEmpty className="text-gray-300 w-3 h-auto" />
-                  <ImStarEmpty className="text-gray-300 w-3 h-auto" />
-                </div>
-              </div>
-              <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
-                <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
-                <SiAdobeillustrator className=" text-orange-400 w-4 lg:w-5 h-auto" />
-                  Illustrator
-                </div>
-                <div className="flex flex-row gap-x-1 justify-center py-2">
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarEmpty className="text-gray-300 w-3 h-auto" />
-                </div>
-              </div>
-              <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
-                <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
-                  <SiAdobephotoshop className=" text-blue-600 w-4 lg:w-5 h-auto" />
-                  Photoshop
-                </div>
-                <div className="flex flex-row gap-x-1 justify-center py-2">
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarEmpty className="text-gray-300 w-3 h-auto" />
-                </div>
-              </div>
-              <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
-                <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
-                  <SiGamemaker className=" text-green-400 w-4 lg:w-5 h-auto" />
-                  Gamemaker
-                </div>
-                <div className="flex flex-row gap-x-1 justify-center py-2">
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarFull className="text-gray-300 w-3 h-auto" />
-                  <ImStarEmpty className="text-gray-300 w-3 h-auto" />
-                  <ImStarEmpty className="text-gray-300 w-3 h-auto" />
-                </div>
-              </div>
 
+          </div>
+          <div  className="flex justify-center w-full h-auto text-white lg:max-w-4xl">
+            <img alt="hero" src={headerHero} className="w-full py-5 px-16 h-auto max-w-2xl lg:px-10 lg:max-w-4xl" />
+          </div>      
+        </div> 
+      </div>
+
+      <div className="bg-blue-600 magicpattern flex justify-center align-middle items-center w-full min-h-[800px]">
+        <div id="about" className="flex flex-col gap-5 gap-y-10 px-4 py-12  h-full w-full justify-center items-center align-middle max-w-[2000px] mx-auto lg:flex-row lg:py-32">
+          <div data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-sine" className="flex w-full justify-center items-center align-middle px-10 lg:px-1 lg:max-w-3xl lg:w-1/3">
+            <img src={aboutMeImage} alt="about-me" className=" drop-shadow-xl drop rounded-xl w-full max-w-sm lg:max-w-lg" />
+          </div>
+
+          <div data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-sine" className="flex flex-col w-full p-3 justify-center items-center align-middle max-w-3xl lg:items-start lg:px-8 lg:w-2/3">
+            <h3 className="text-4xl text-white font-bold text-center lg:text-left">Nice to meet you!</h3>
+            <p className="text-lg text-white py-3 pt-8 max-w-3xl text-center lg:max-w-none lg:text-left">I started my career as a Web Designer more than 3 years ago, I've worked on a range of projects (including landing pages, microsites, email templates, social cards, and others) and collaborated with wonderful people to create digital goods for both commercial and consumer use. I'm quiet confident, innately curious, and constantly seeking ways on improving my creativity and programming skills.</p>
+            
+            <div className="bg-slate-900 flex flex-col w-full max-w-3xl rounded-t-xl mt-3">
+              <div className=" bg-slate-50  py-2 pl-5 pr-6 rounded-br-xl rounded-tl-xl w-fit font-bold uppercase">
+                Technical Skills
+              </div>
+              <div className="flex flex-row flex-wrap  justify-center px-4 py-1 min-h-max h-auto w-full text-white rounded-xl my-3 ">
+                <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
+                  <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
+                    <DiHtml5 className="text-orange-500 w-5 lg:w-6 h-auto" />
+                    HTML5
+                  </div>
+                  <div className="flex flex-row gap-x-1 justify-center py-2">
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarEmpty className="text-gray-300 w-3 h-auto" />
+                  </div>
+                </div>
+                <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
+                  <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
+                    <DiCss3 className="text-blue-500 w-5 lg:w-6 h-auto" />
+                    CSS3
+                  </div>
+                  <div className="flex flex-row gap-x-1 justify-center py-2">
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarEmpty className="text-gray-300 w-3 h-auto" />
+                  </div>
+                </div>
+                <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
+                  <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
+                    <DiJavascript1 className="text-yellow-500 w-5 lg:w-6 h-auto" />
+                    Javascript
+                  </div>
+                  <div className="flex flex-row gap-x-1 justify-center py-2">
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarEmpty className="text-gray-300 w-3 h-auto" />
+                  </div>
+                </div>
+                <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
+                  <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
+                    <DiReact className=" text-cyan-400 w-5 lg:w-6 h-auto" />
+                    React JS
+                  </div>
+                  <div className="flex flex-row gap-x-1 justify-center py-2">
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarHalf className="text-gray-300 w-3 h-auto" />
+                    <ImStarEmpty className="text-gray-300 w-3 h-auto" />
+                  </div>
+                </div>
+                <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
+                  <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
+                    <SiTailwindcss className=" text-sky-400 w-5 lg:w-6 h-auto" />
+                    Tailwind
+                  </div>
+                  <div className="flex flex-row gap-x-1 justify-center py-2">
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarHalf className="text-gray-300 w-3 h-auto" />
+                    <ImStarEmpty className="text-gray-300 w-3 h-auto" />
+                  </div>
+                </div>
+                <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
+                  <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
+                    <DiWordpress className=" text-sky-500 w-5 lg:w-6 h-auto" />
+                    Wordpress
+                  </div>
+                  <div className="flex flex-row gap-x-1 justify-center py-2">
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarEmpty className="text-gray-300 w-3 h-auto" />
+                  </div>
+                </div>
+                <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
+                  <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
+                    <DiGit className=" text-red-500 w-5 lg:w-6 h-auto" />
+                    Git
+                  </div>
+                  <div className="flex flex-row gap-x-1 justify-center py-2">
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarHalf className="text-gray-300 w-3 h-auto" />
+                    <ImStarEmpty className="text-gray-300 w-3 h-auto" />
+                  </div>
+                </div>
+                <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
+                  <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
+                    <DiGithubBadge className=" text-gray-300 w-5 lg:w-6 h-auto" />
+                    GitHub
+                  </div>
+                  <div className="flex flex-row gap-x-1 justify-center py-2">
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarEmpty className="text-gray-300 w-3 h-auto" />
+                  </div>
+                </div>
+                <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
+                  <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
+                  <SiAdobexd className=" text-pink-600 w-4 lg:w-5 h-auto" />
+                    XD
+                  </div>
+                  <div className="flex flex-row gap-x-1 justify-center py-2">
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarEmpty className="text-gray-300 w-3 h-auto" />
+                    <ImStarEmpty className="text-gray-300 w-3 h-auto" />
+                  </div>
+                </div>
+                <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
+                  <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
+                  <SiAdobeillustrator className=" text-orange-400 w-4 lg:w-5 h-auto" />
+                    Illustrator
+                  </div>
+                  <div className="flex flex-row gap-x-1 justify-center py-2">
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarEmpty className="text-gray-300 w-3 h-auto" />
+                  </div>
+                </div>
+                <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
+                  <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
+                    <SiAdobephotoshop className=" text-blue-600 w-4 lg:w-5 h-auto" />
+                    Photoshop
+                  </div>
+                  <div className="flex flex-row gap-x-1 justify-center py-2">
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarEmpty className="text-gray-300 w-3 h-auto" />
+                  </div>
+                </div>
+                <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
+                  <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
+                    <SiGamemaker className=" text-green-400 w-4 lg:w-5 h-auto" />
+                    Gamemaker
+                  </div>
+                  <div className="flex flex-row gap-x-1 justify-center py-2">
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarEmpty className="text-gray-300 w-3 h-auto" />
+                    <ImStarEmpty className="text-gray-300 w-3 h-auto" />
+                  </div>
+                </div>
+
+              </div>
             </div>
+            
+            <div className="flex justify-end w-full rounded-b-xl bg-[#0F172A]">
+              <a href="https://drive.google.com/u/0/uc?id=1Y6dgcsIT8u-ebaebrN_z_R_1r1cDPFm8&export=download" target="_blank" rel="noreferrer" className="Btn bg-yellow-400 rounded-xl rounded-tr-none rounded-bl-none transition-all ease-in-out duration-150  group">
+                <div className="sign">
+                  <FiDownloadCloud className="h-6 w-6"/>
+                </div>
+                <div className="text text-md ">Download my CV</div>
+              </a>
+            </div>
+            
           </div>
-          
-          <div className="flex justify-end w-full mt-4">
-            <a href="https://drive.google.com/u/0/uc?id=1Y6dgcsIT8u-ebaebrN_z_R_1r1cDPFm8&export=download" target="_blank" rel="noreferrer"
-              class="rounded-lg relative w-fit h-10 cursor-pointer flex items-center bg-yellow-400 group"
-            >
-              <span class="text-zinc-950 opacity-100 text-md font-medium ml-4 mr-11 group-hover:opacity-0 transition-all ease-in-out duration-300">Download my CV</span>
-              <span class="absolute right-0.5 h-full w-10 rounded-lg bg-yellow-400 flex items-center justify-center transform group-hover:translate-x-0 group-hover:right-0 group-hover:w-full transition-all duration-300">
-              <FiDownloadCloud class="text-zinc-950 w-5 h-auto" />
-              </span>
-            </a>
-          </div>
-          
         </div>
       </div>
 
-      <div id="projects" className="projects flex flex-col p-5 py-10 items-center justify-center w-full min-h-screen h-full">
+      <div id="projects" className="projects flex flex-col p-5 py-12 items-center justify-center mx-auto w-full max-w-[2000px] min-h-[800px] lg:py-32 h-full">
         <div data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-sine" className="flex flex-col justify-center align-middle items-center gap-2 max-w-2xl">
           <h3 className="text-4xl text-zinc-700 text-center font-bold" >My Projects</h3>
           <p className="text-md sm:text-lg text-center text-zinc-700 py-1 sm:py-4"> Here are some of the projects I've worked on.</p>
@@ -368,7 +370,7 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
         <div data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-sine" className="max-w-7xl py-5 pt-10">
           <ul className="flex flex-wrap flex-row gap-5 justify-center items-center align-middle ">
             {
-              projects.map((project,index) => (
+              projects.map((project) => (
                 <a href={project.projectLink} key={project.id} target={`${project.id===3?"":"_blank"}`} rel="noreferrer">
                   <li style={{ backgroundImage: `url(${project.projectImage})` }} className="text-white flex justify-end items-end bg-cover bg-no-repeat bg-center w-80 h-80 rounded-lg transition-all ease-in-out duration-500 overflow-hidden shadow-md drop-shadow-md  shadow-slate-500 bg-gree hover:cursor-pointer group relative" >
                     <div className={`absolute ${project.projectStatus === "Published" ? "bg-green-500" : "bg-orange-500"} top-0 right-0 py-1.5 px-2.5 rounded-bl-lg bg-opacity-90 font-semibold text-sm z-30`}>{project.projectStatus}</div>
@@ -391,7 +393,7 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
         </div>
       </div>
 
-      <div id="contact" data-aos="fade-up" className="flex justify-center w-full px-3 lg:px-5 py-3">
+      <div id="contact" data-aos="fade-up" className="flex justify-center w-full px-3 lg:px-5 py-3 pt-12">
         <Contact
           notifySentMessage={notifySentMessage}
         />

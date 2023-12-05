@@ -1,14 +1,11 @@
 import React from 'react'
-import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { FiDownloadCloud } from "react-icons/fi"
 import { FaBars } from "react-icons/fa"
 import { FaXmark } from "react-icons/fa6"
 import logo from '../../Assets/Images/Logo-3.png'
 
-const Navbar2 = () => {
-
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+const Navbar2 = ({mobileMenuOpen, setMobileMenuOpen}) => {
 
     const navigation = [
         { name: 'About', routePath: "/", href:"/#about" , id:1},
@@ -18,7 +15,7 @@ const Navbar2 = () => {
 
   return (
     <>
-      <header className=" absolute inset-x-0 top-0 z-40">
+      <header className="absolute inset-x-0 top-0 z-40 w-full mx-auto max-w-[2000px]">
         {/*Desktop Nav*/}
         <nav className="flex items-center justify-end p-6 lg:px-8" aria-label="Global">
           {/*Nav Logo*/}
@@ -32,7 +29,7 @@ const Navbar2 = () => {
           <div className="flex lg:hidden">
             <button
               type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-zinc-700"
+              className={`-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-zinc-700 ${mobileMenuOpen ? "text-opacity-0" : "text-opacity-100"}`}
               onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>
@@ -47,6 +44,7 @@ const Navbar2 = () => {
                   className=' text-2xl py-2 px-3 rounded-lg font-semibold leading-6 text-zinc-700 transition-all duration-200 ease-linear hover:bg-gray-100'
                   href={item.href}
                   key={item.id}
+                  onClick={() => setMobileMenuOpen(true)}
                 >
                     {item.name.toUpperCase()}
                 </a> 
@@ -55,11 +53,11 @@ const Navbar2 = () => {
 
           {/*Extra Menu Button */}
           <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:align-middle">
-            <a href="https://drive.google.com/u/0/uc?id=1Y6dgcsIT8u-ebaebrN_z_R_1r1cDPFm8&export=download" target="_blank" rel="noreferrer" class="Btn bg-none hover:bg-yellow-400 rounded-lg group">
-              <div class="sign">
+            <a href="https://drive.google.com/u/0/uc?id=1Y6dgcsIT8u-ebaebrN_z_R_1r1cDPFm8&export=download" target="_blank" rel="noreferrer" className="Btn bg-none hover:bg-yellow-400 rounded-lg group">
+              <div className="sign">
                 <FiDownloadCloud className="h-6 w-6 text-blue-500 group-hover:text-zinc-950"/>
               </div>
-              <div class="text text-md ">Download my CV</div>
+              <div className="text text-md ">Download my CV</div>
             </a>
           </div>
         </nav>
@@ -67,10 +65,10 @@ const Navbar2 = () => {
         {/*Tablet/Movile Nav*/}
         <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
             <div className="fixed inset-0 z-50" />
-            <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white bg-opacity-[97%] px-6 py-4 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10  divide-y-[1px]">
                 <div className="flex items-center justify-between">
                     <a href="/#home-page" className="-m-1.5 p-1.5">
-                      <img src={logo} alt="logo" className="h-12 w-auto text-blue-500 hover:animate-pulse" />
+                      <img src={logo} alt="logo" className="h-10 w-auto text-blue-500 hover:animate-pulse" />
                     </a>
                     <button
                         type="button"
@@ -78,17 +76,18 @@ const Navbar2 = () => {
                         onClick={() => setMobileMenuOpen(false)}
                     >
                       <span className="sr-only">Close menu</span>
-                      <FaXmark className="h-6 w-6" aria-hidden="true" />
+                      <FaXmark className="h-7 w-7" aria-hidden="true" />
                     </button>
                 </div>
-                <div className="mt-6 flow-root">
-                <div className="-my-6">
+                <div className="mt-5 flow-root">
+                <div className="-my-3">
                     <div className="space-y-2 py-6 font-agency-fb">
                     {navigation.map((item) => (      
                         <a
                           className="-mx-3 block py-2 px-3 text-lg rounded-lg font-semibold leading-7 text-zinc-700 transition-all duration-200 ease-linear hover:bg-gray-100"
                           href={item.href}
                           key={item.id}
+                          onClick={() => setMobileMenuOpen(false)}
                         >
                             {item.name.toUpperCase()}
                         </a> 

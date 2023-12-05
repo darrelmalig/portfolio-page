@@ -85,7 +85,6 @@ const Contact = ({notifySentMessage}) => {
                 }}
                 rows={3}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-400 sm:text-sm sm:leading-6 resize-none"
-                defaultValue={''}
               />
             </div>
           </div>
@@ -95,11 +94,11 @@ const Contact = ({notifySentMessage}) => {
         <div className="mt-6 flex gap-x-3 justify-end ">
           <button
             type="submit"
-            class="rounded-lg relative w-fit h-10 cursor-pointer flex items-center bg-yellow-400 group"
+            className="rounded-lg relative w-fit h-10 cursor-pointer flex items-center bg-yellow-400 group"
           >
-            <span class="text-zinc-950 opacity-100 text-md font-medium ml-4 mr-11 group-hover:opacity-0 transition-all ease-in-out duration-300">Send</span>
-            <span class="absolute right-0.5 h-full w-10 rounded-lg bg-yellow-400 flex items-center justify-center transform group-hover:translate-x-0 group-hover:right-0 group-hover:w-full transition-all duration-300">
-            <FiSend class="text-zinc-950 transition-all ease-in-out duration-200 group-hover:rotate-45" />
+            <span className="text-zinc-950 opacity-100 text-md font-medium ml-4 mr-11 group-hover:opacity-0 transition-all ease-in-out duration-300">Send</span>
+            <span className="absolute right-0.5 h-full w-10 rounded-lg bg-yellow-400 flex items-center justify-center transform group-hover:translate-x-0 group-hover:right-0 group-hover:w-full transition-all duration-300">
+            <FiSend className="text-zinc-950 transition-all ease-in-out duration-200 group-hover:rotate-45" />
             </span>
           </button>
         </div>

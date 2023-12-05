@@ -121,6 +121,22 @@ html{
   transform: translate(2px ,2px);
 }
 
+/* width */
+::-webkit-scrollbar { 
+  width: 0px; 
+  height: 0px;
+} 
+
+/* Track */
+::-webkit-scrollbar-track { 
+  background: none; 
+} 
+
+/* Handle */
+::-webkit-scrollbar-thumb { 
+  background: #dfdfdf; 
+  border-radius: 5px; 
+} 
 
 
 
