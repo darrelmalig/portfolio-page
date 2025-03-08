@@ -16,7 +16,7 @@ const Footer = () => {
 
                   <a href="mailto:darrelmalig19@gmail.com" target="_blank" rel="noreferrer" className="flex justify-center items-center align-middle text-white bg-slate-900 p-1.5 rounded-full transition-all ease-in-out duration-200 hover:scale-105 hover:bg-yellow-500 hover:text-zinc-900 hover:animate-pulse"><BiLogoGmail /></a>
               </div>
-              <p className=" text-xs text-center max-w-xs text-zinc-700  uppercase">D.Malig &copy; 2023</p>
+              <p className=" text-xs text-center max-w-xs text-zinc-700  uppercase">D.Malig &copy; 2025</p>
           </div>
       </footer> 
   )

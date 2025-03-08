@@ -4,8 +4,10 @@ import Dota2Heroes from '../../Assets/Images/Dota-2-Heroes.png'
 import Pokedex from '../../Assets/Images/Pokedex.png'
 import headerHero from '../../Assets/Images/Portfolio-Hero-Image.png'
 import aboutMeImage from '../../Assets/Images/Portfolio-Body-Image.png'
+import Lifelabrynth from '../../Assets/Images/Lifelabrynth.png'
 import { DiHtml5, DiJavascript1, DiCss3, DiGit, DiGithubBadge, DiReact, DiWordpress } from "react-icons/di"
-import { SiAdobeillustrator, SiAdobephotoshop, SiAdobexd, SiTailwindcss, SiGamemaker } from "react-icons/si"
+import { SiAdobeillustrator, SiAdobephotoshop, SiStoryblok, SiTailwindcss, SiGamemaker } from "react-icons/si"
+import { FaVuejs } from "react-icons/fa";
 import { FiDownloadCloud } from "react-icons/fi"
 import { AiFillApi } from "react-icons/ai"
 import { ImStarFull, ImStarHalf, ImStarEmpty } from "react-icons/im"
@@ -51,6 +53,21 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
       },
       {
         id: 3,
+        projectName: "Lifelabrynth",
+        projectDesc: "A static web page that is created using Wordpress + Elementor",
+        projectLink: "https://darrelmalig.github.io/lifelabyrinth/",
+        projectImage: Lifelabrynth,
+        projectTech: [
+          <DiHtml5 key="10" className="w-5 h-auto" />,
+          <DiCss3 key="11" className="w-5 h-auto" />,
+          <DiJavascript1 key="12" className="w-5 h-auto" />,
+          <DiWordpress key="13" className="w-5 h-auto" />,
+          <DiGithubBadge key="15" className="w-5 h-auto" />
+        ],
+        projectStatus: "Published"
+      },
+      {
+        id: 4,
         projectName: "Pokedex",
         projectDesc: "A Web Pokedex page where you can browse and check data of pokemons from all generations",
         projectLink: "#projects",
@@ -153,7 +170,7 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
               </strong>
             </h1>
             
-            <h2 className="text-3xl text-zinc-700  font-agency-fb">WEB DESIGNER | FRONT-END DEVELOPER</h2>
+            <h2 className="text-3xl text-zinc-700  font-agency-fb">FRONT-END DEVELOPER</h2>
             <p className=" text-lg mt-2 text-zinc-700 max-w-3xl lg:max-w-none ">I enjoy designing and coding things that are stunningly simple.</p>
             <div className=" text-slate-500 pt-3 flex flex-row gap-x-1">
               <DiHtml5 className="w-7 h-auto opacity-50 transition-all ease-in-out duration-300 hover:opacity-100" />
@@ -242,8 +259,34 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
                 </div>
                 <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
                   <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
+                  <FaVuejs className=" text-green-600 w-4 lg:w-5 h-auto" />
+                    Vue JS
+                  </div>
+                  <div className="flex flex-row gap-x-1 justify-center py-2">
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarEmpty className="text-gray-300 w-3 h-auto" />
+                    <ImStarEmpty className="text-gray-300 w-3 h-auto" />
+                  </div>
+                </div>
+                <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
+                  <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
                     <SiTailwindcss className=" text-sky-400 w-5 lg:w-6 h-auto" />
                     Tailwind
+                  </div>
+                  <div className="flex flex-row gap-x-1 justify-center py-2">
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarFull className="text-gray-300 w-3 h-auto" />
+                    <ImStarHalf className="text-gray-300 w-3 h-auto" />
+                    <ImStarEmpty className="text-gray-300 w-3 h-auto" />
+                  </div>
+                </div>
+                <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
+                  <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
+                    <SiStoryblok className=" text-gray-300 w-5 lg:w-6 h-auto" />
+                    Storyblok
                   </div>
                   <div className="flex flex-row gap-x-1 justify-center py-2">
                     <ImStarFull className="text-gray-300 w-3 h-auto" />
@@ -276,32 +319,6 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
                     <ImStarFull className="text-gray-300 w-3 h-auto" />
                     <ImStarFull className="text-gray-300 w-3 h-auto" />
                     <ImStarHalf className="text-gray-300 w-3 h-auto" />
-                    <ImStarEmpty className="text-gray-300 w-3 h-auto" />
-                  </div>
-                </div>
-                <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
-                  <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
-                    <DiGithubBadge className=" text-gray-300 w-5 lg:w-6 h-auto" />
-                    GitHub
-                  </div>
-                  <div className="flex flex-row gap-x-1 justify-center py-2">
-                    <ImStarFull className="text-gray-300 w-3 h-auto" />
-                    <ImStarFull className="text-gray-300 w-3 h-auto" />
-                    <ImStarFull className="text-gray-300 w-3 h-auto" />
-                    <ImStarFull className="text-gray-300 w-3 h-auto" />
-                    <ImStarEmpty className="text-gray-300 w-3 h-auto" />
-                  </div>
-                </div>
-                <div className="flex flex-col w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 xl:w-1/4 p-3 justify-center items-center">
-                  <div className="flex flex-row lg:text-md font-normal text-white gap-x-1.5">
-                  <SiAdobexd className=" text-pink-600 w-4 lg:w-5 h-auto" />
-                    XD
-                  </div>
-                  <div className="flex flex-row gap-x-1 justify-center py-2">
-                    <ImStarFull className="text-gray-300 w-3 h-auto" />
-                    <ImStarFull className="text-gray-300 w-3 h-auto" />
-                    <ImStarFull className="text-gray-300 w-3 h-auto" />
-                    <ImStarEmpty className="text-gray-300 w-3 h-auto" />
                     <ImStarEmpty className="text-gray-300 w-3 h-auto" />
                   </div>
                 </div>
@@ -349,7 +366,7 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
             </div>
             
             <div className="flex justify-end w-full rounded-b-xl bg-[#0F172A]">
-              <a href="https://drive.google.com/u/0/uc?id=1Y6dgcsIT8u-ebaebrN_z_R_1r1cDPFm8&export=download" target="_blank" rel="noreferrer" className="Btn bg-yellow-400 rounded-xl rounded-tr-none rounded-bl-none transition-all ease-in-out duration-150  group">
+              <a href="https://drive.google.com/u/0/uc?id=1xpJmUxM-EgC_ShLjWK3_v5C-JyAGLiFn&export=download" target="_blank" rel="noreferrer" className="Btn bg-yellow-400 rounded-xl rounded-tr-none rounded-bl-none transition-all ease-in-out duration-150  group">
                 <div className="sign">
                   <FiDownloadCloud className="h-6 w-6"/>
                 </div>
