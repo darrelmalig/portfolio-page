@@ -3,6 +3,7 @@ import './Loader.css'
 
 const Loader = () => {
   return (
+	<section id="loading-screen" className="absolute top-0 bg-slate-50 h-screen w-screen z-50 flex justify-center align-middle items-center text-xl font-semibold transition-all ease-in-out duration-200">
     <div className="socket">
 			<div className="gel center-gel">
 				<div className="hex-brick h1"></div>
@@ -191,8 +192,8 @@ const Loader = () => {
 				<div className="hex-brick h2"></div>
 				<div className="hex-brick h3"></div>
 			</div>
-			
 		</div>
+	</section>
   )
 }
 
