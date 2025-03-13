@@ -11,7 +11,7 @@ const Contact = ({notifySentMessage}) => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailJs.sendForm('service_lgralfg','template_wxj89pl', e.target, '1ST_eh9wLuyXlJwTZ');
+        emailJs.sendForm('service_afo1xsl','template_d6coy95', e.target, 'uRaZ-lh3feTQJiLgv');
 
         notifySentMessage();
         setName('');
