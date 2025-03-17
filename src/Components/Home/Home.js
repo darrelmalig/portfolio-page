@@ -119,11 +119,11 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
     },
     {
       skillName:"Node.js",
-      skillBadge: <FaNodeJs className=" text-orange-400 w-6 sm:w-7 lg:w-8 h-auto" />,
+      skillBadge: <FaNodeJs className=" text-green-400 w-6 sm:w-7 lg:w-8 h-auto" />,
     },
     {
       skillName:"MongoDB",
-      skillBadge: <SiMongodb  className=" text-green-200 w-6 sm:w-7 lg:w-8 h-auto" />,
+      skillBadge: <SiMongodb  className=" text-green-300 w-6 sm:w-7 lg:w-8 h-auto" />,
     },
     {
       skillName:"Vue.js",
