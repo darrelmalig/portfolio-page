@@ -6,9 +6,9 @@ import headerHero from '../../Assets/Images/Portfolio-Hero-Image.png'
 import aboutMeImage from '../../Assets/Images/Portfolio-Body-Image.png'
 import Lifelabrynth from '../../Assets/Images/Lifelabrynth.png'
 import { DiHtml5, DiJavascript1, DiCss3, DiGit, DiGithubBadge, DiReact, DiWordpress } from "react-icons/di"
-import { SiAdobeillustrator, SiAdobephotoshop,SiStoryblok, SiTailwindcss, SiGamemaker } from "react-icons/si"
+import { SiAdobeillustrator, SiAdobephotoshop,SiStoryblok, SiTailwindcss, SiMongodb, SiGamemaker  } from "react-icons/si"
 import { AiFillApi } from "react-icons/ai"
-import { FaVuejs } from "react-icons/fa";
+import { FaVuejs, FaNodeJs  } from "react-icons/fa";
 import Loader from '../Loader/Loader'
 import Footer from '../Footer/Footer'
 import Contact from '../Contact/Contact'
@@ -90,77 +90,53 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
   const skillLists = 
   [
     {
-      skillId: 1,
       skillName:"HTML5",
-      skillBadge: <DiHtml5 className="text-orange-500 w-5 lg:w-6 h-auto" />,
-      skillStar: 4
+      skillBadge: <DiHtml5 className="text-orange-500 w-7 sm:w-8 lg:w-8 h-auto" />,
     },
     {
-      skillId: 2,
       skillName:"CSS3",
-      skillBadge: <DiCss3 className="text-blue-500 w-5 lg:w-6 h-auto" />,
-      skillStar: 4
+      skillBadge: <DiCss3 className="text-blue-500 w-7 sm:w-8 lg:w-8 h-auto" />,
     },
     {
-      skillId: 3,
       skillName:"Javascript",
-      skillBadge: <DiJavascript1 className="text-yellow-500 w-5 lg:w-6 h-auto" />,
-      skillStar: 4
+      skillBadge: <DiJavascript1 className="text-yellow-500 w-7 sm:w-8 lg:w-9 h-auto" />,
     },
     {
-      skillId: 4,
       skillName:"React.js",
-      skillBadge: <DiReact className=" text-cyan-400 w-5 lg:w-6 h-auto" />,
-      skillStar: 3.5
+      skillBadge: <DiReact className=" text-cyan-400 w-8 sm:w-9 lg:w-10 h-auto" />,
     },
     {
-      skillId: 5,
-      skillName:"Vue.js",
-      skillBadge: <FaVuejs className=" text-green-600 w-4 lg:w-5 h-auto" />,
-      skillStar: 3
-    },
-    {
-      skillId: 6,
       skillName:"Tailwind",
-      skillBadge: <SiTailwindcss className=" text-sky-400 w-5 lg:w-6 h-auto" />,
-      skillStar: 4
+      skillBadge: <SiTailwindcss className=" text-sky-400 w-7 sm:w-8 lg:w-8 h-auto" />,
     },
     {
-      skillId: 7,
-      skillName:"Storyblok",
-      skillBadge: <SiStoryblok className=" text-gray-300 w-5 lg:w-6 h-auto" />,
-      skillStar: 3.5
-    },
-    {
-      skillId: 8,
-      skillName:"Wordpress",
-      skillBadge: <DiWordpress className=" text-sky-500 w-5 lg:w-6 h-auto" />,
-      skillStar: 3.5
-    },
-    {
-      skillId: 9,
       skillName:"Git",
-      skillBadge: <DiGit className=" text-red-500 w-5 lg:w-6 h-auto" />,
-      skillStar: 3.5
+      skillBadge: <DiGit className=" text-red-500 w-8 sm:w-9 lg:w-10 h-auto" />,
     },
     {
-      skillId: 10,
-      skillName:"Illustrator",
-      skillBadge: <SiAdobeillustrator className=" text-orange-400 w-4 lg:w-5 h-auto" />,
-      skillStar: 4
+      skillName:<div className='font-medium text-xl'>ZUSTAND</div>,
+      skillBadge: "",
     },
     {
-      skillId: 11,
-      skillName:"Photoshop",
-      skillBadge: <SiAdobephotoshop className=" text-blue-600 w-4 lg:w-5 h-auto" />,
-      skillStar: 3.5
+      skillName:"Node.js",
+      skillBadge: <FaNodeJs className=" text-orange-400 w-6 sm:w-7 lg:w-8 h-auto" />,
     },
     {
-      skillId: 12,
-      skillName:"Gamemaker",
-      skillBadge: <SiGamemaker className=" text-green-400 w-4 lg:w-5 h-auto" />,
-      skillStar: 3
-    }
+      skillName:"MongoDB",
+      skillBadge: <SiMongodb  className=" text-green-200 w-6 sm:w-7 lg:w-8 h-auto" />,
+    },
+    {
+      skillName:"Vue.js",
+      skillBadge: <FaVuejs className=" text-green-600 w-6 sm:w-7 lg:w-8 h-auto" />,
+    },
+    {
+      skillName:"Storyblok",
+      skillBadge: <SiStoryblok className=" text-gray-300 w-5 sm:w-6 lg:w-7 h-auto" />,
+    },
+    {
+      skillName:"Wordpress",
+      skillBadge: <DiWordpress className=" text-sky-500 w-7 sm:w-8 lg:w-9 h-auto" />,
+    },
   ];
 
   const techStackItems = [
@@ -280,7 +256,7 @@ const Home = ( {pageReady, pageIsReady, notifySentMessage}) => {
       <Projects 
           projects={projects}
       />
-
+      
       <Contact
           notifySentMessage={notifySentMessage}
         />

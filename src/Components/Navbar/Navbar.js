@@ -5,7 +5,7 @@ import { FaBars } from "react-icons/fa"
 import { FaXmark } from "react-icons/fa6"
 import logo from '../../Assets/Images/Logo-3.png'
 
-const Navbar2 = ({mobileMenuOpen, setMobileMenuOpen}) => {
+const Navbar = ({mobileMenuOpen, setMobileMenuOpen}) => {
 
     const navigation = [
         { name: 'About', routePath: "/", href:"/#about" , id:1},
@@ -53,7 +53,7 @@ const Navbar2 = ({mobileMenuOpen, setMobileMenuOpen}) => {
 
           {/*Extra Menu Button */}
           <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:align-middle">
-            <a href="https://drive.google.com/u/0/uc?id=1xpJmUxM-EgC_ShLjWK3_v5C-JyAGLiFn&export=download" target="_blank" rel="noreferrer" className="Btn bg-none hover:bg-yellow-400 rounded-lg group">
+            <a href="https://drive.google.com/u/0/uc?id=1GJB7UXpkn5vzb5zNEDl5WaW1Lp5BUcML&export=download" target="_blank" rel="noreferrer" className="Btn bg-none hover:bg-yellow-400 rounded-lg group">
               <div className="sign">
                 <FiDownloadCloud className="h-6 w-6 text-blue-500 group-hover:text-zinc-950"/>
               </div>
@@ -102,4 +102,4 @@ const Navbar2 = ({mobileMenuOpen, setMobileMenuOpen}) => {
   )
 }
 
-export default Navbar2
+export default Navbar

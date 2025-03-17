@@ -1,6 +1,6 @@
 import './App.css'
 import Home from './Components/Home/Home'
-import Navbar2 from './Components/Navbar/Navbar2'
+import Navbar from './Components/Navbar/Navbar'
 import { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -24,7 +24,7 @@ function App() {
   return (
     <>
       <main>
-        <Navbar2
+        <Navbar
           mobileMenuOpen={mobileMenuOpen}
           setMobileMenuOpen={setMobileMenuOpen}
         />

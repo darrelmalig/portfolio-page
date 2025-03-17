@@ -1,5 +1,5 @@
 import React from 'react'
-import { BiLogoLinkedin, BiLogoFacebook, BiLogoGmail } from "react-icons/bi"
+import { BiLogoLinkedin, BiLogoFacebook, BiLogoGmail,BiLogoGithub  } from "react-icons/bi"
 import logo from '../../Assets/Images/Logo-3.png'
 
 const Footer = () => {
@@ -15,6 +15,8 @@ const Footer = () => {
                   <a href="https://www.linkedin.com/in/darrelmaligjr/" target="_blank" rel="noreferrer" className="flex justify-center items-center align-middle text-white bg-slate-900 p-1.5 rounded-full transition-all ease-in-out duration-200 hover:scale-105 hover:bg-yellow-500 hover:text-zinc-900 hover:animate-pulse"><BiLogoLinkedin /></a>
 
                   <a href="mailto:darrelmalig19@gmail.com" target="_blank" rel="noreferrer" className="flex justify-center items-center align-middle text-white bg-slate-900 p-1.5 rounded-full transition-all ease-in-out duration-200 hover:scale-105 hover:bg-yellow-500 hover:text-zinc-900 hover:animate-pulse"><BiLogoGmail /></a>
+
+                  <a href="https://github.com/darrelmalig" target="_blank" rel="noreferrer" className="flex justify-center items-center align-middle text-white bg-slate-900 p-1.5 rounded-full transition-all ease-in-out duration-200 hover:scale-105 hover:bg-yellow-500 hover:text-zinc-900 hover:animate-pulse"><BiLogoGithub  /></a>
               </div>
               <p className=" text-xs text-center max-w-xs text-zinc-700  uppercase">D.Malig &copy; 2025</p>
           </div>
