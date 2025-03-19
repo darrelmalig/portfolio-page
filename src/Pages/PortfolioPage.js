@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from 'react'
-import Header from '../Components/Header';
+import Header from '../Components/Layout/Header';
 import Loader from '../Components/common/Loader';
-import ContactForm from '../Components/ContactForm';
-import Footer from '../Components/Footer';
+import ContactForm from '../Components/Layout/ContactForm';
+import Footer from '../Components/Layout/Footer';
 import BackToTopButton from '../Components/common/BackToTopButton';
-import About from '../Components/About';
-import HeroSection from '../Components/HeroSection';
-import Projects from '../Components/Projects';
+import About from '../Components/Layout/About';
+import HeroSection from '../Components/Layout/HeroSection';
+import Projects from '../Components/Layout/Projects';
 
 const Home = () => {
 

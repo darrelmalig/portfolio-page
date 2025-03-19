@@ -1,9 +1,9 @@
 import React from 'react'
-import DaMath from '../Assets/Images/DaMath.webp'
-import Dota2Heroes from '../Assets/Images/Dota-2-Heroes.png'
-import Pokedex from '../Assets/Images/Pokedex.png'
-import Lifelabrynth from '../Assets/Images/Lifelabrynth.png'
-import ProjectCard from './common/ProjectCard'
+import DaMath from '../../Assets/Images/DaMath.webp'
+import Dota2Heroes from '../../Assets/Images/Dota-2-Heroes.png'
+import Pokedex from '../../Assets/Images/Pokedex.png'
+import Lifelabrynth from '../../Assets/Images/Lifelabrynth.png'
+import ProjectCard from '../common/ProjectCard'
 import { DiHtml5, DiJavascript1, DiCss3, DiGithubBadge, DiReact, DiWordpress } from "react-icons/di"
 import { SiAdobeillustrator, SiAdobephotoshop, SiTailwindcss, SiGamemaker  } from "react-icons/si"
 import { AiFillApi } from "react-icons/ai"

@@ -3,7 +3,7 @@ import { Dialog } from '@headlessui/react'
 import { FiDownloadCloud } from "react-icons/fi"
 import { FaBars } from "react-icons/fa"
 import { FaXmark } from "react-icons/fa6"
-import logo from '../Assets/Images/Logo-3.png'
+import logo from '../../Assets/Images/Logo-3.png'
 
 const Header = () => {
 
@@ -32,6 +32,7 @@ const Header = () => {
                   className=' text-2xl py-2 px-3 rounded-lg font-semibold leading-6 text-zinc-700 transition-all duration-200 ease-linear hover:bg-gray-100'
                   href={item.href}
                   key={item.id}
+                  data-testid={`nav-desktop-${item.name}`}
                 >
                     {item.name.toUpperCase()}
                 </a> 
@@ -87,6 +88,7 @@ const Header = () => {
                           className="-mx-3 block py-2 px-3 text-lg rounded-lg font-semibold leading-7 text-zinc-700 transition-all duration-200 ease-linear hover:bg-gray-100"
                           href={item.href}
                           key={item.id}
+                          data-testid={`nav-mobile-${item.name}`}
                           onClick={() => setMobileMenuOpen(false)}
                         >
                             {item.name.toUpperCase()}

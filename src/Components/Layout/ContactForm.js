@@ -1,7 +1,7 @@
 import React, {  useState } from 'react'
 import emailJs from '@emailjs/browser'
 import { FiSend } from  'react-icons/fi'
-import { useSuccessToast } from '../Hooks/useToastNotification'
+import { useSuccessToast } from '../../Hooks/useToastNotification'
 
 const ContactForm = () => {
 

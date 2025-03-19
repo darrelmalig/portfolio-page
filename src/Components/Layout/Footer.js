@@ -1,6 +1,6 @@
 import React from 'react'
 import { BiLogoLinkedin, BiLogoFacebook, BiLogoGmail,BiLogoGithub  } from "react-icons/bi"
-import logo from '../Assets/Images/Logo-3.png'
+import logo from '../../Assets/Images/Logo-3.png'
 
 const Footer = () => {
 

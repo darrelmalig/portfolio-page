@@ -3,8 +3,8 @@ import { FiDownloadCloud } from "react-icons/fi"
 import { DiHtml5, DiJavascript1, DiCss3, DiGit, DiReact, DiWordpress } from "react-icons/di"
 import { SiStoryblok, SiTailwindcss, SiMongodb  } from "react-icons/si"
 import { FaVuejs, FaNodeJs  } from "react-icons/fa";
-import IconSkill from './common/IconSkill';
-import aboutMeImage from '../Assets/Images/Portfolio-Body-Image.png'
+import IconSkill from '../common/IconSkill';
+import aboutMeImage from '../../Assets/Images/Portfolio-Body-Image.png'
 
 
   const skillLists = 
