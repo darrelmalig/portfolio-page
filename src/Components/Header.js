@@ -1,30 +1,54 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Dialog } from '@headlessui/react'
 import { FiDownloadCloud } from "react-icons/fi"
 import { FaBars } from "react-icons/fa"
 import { FaXmark } from "react-icons/fa6"
-import logo from '../../Assets/Images/Logo-3.png'
+import logo from '../Assets/Images/Logo-3.png'
 
-const Navbar = ({mobileMenuOpen, setMobileMenuOpen}) => {
+const Header = () => {
 
-    const navigation = [
-        { name: 'About', routePath: "/", href:"/#about" , id:1},
-        { name: 'Projects', routePath: "/", href:"/#projects" , id:2},
-        { name: 'Contact', routePath: "/", href:"/#contact" , id:3}
-    ]
+  const navigation = [
+    { name: 'About', routePath: "/", href:"/#about" , id:1},
+    { name: 'Projects', routePath: "/", href:"/#projects" , id:2},
+    { name: 'Contact', routePath: "/", href:"/#contact" , id:3}
+  ]
+
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <>
       <header className="absolute inset-x-0 top-0 z-40 w-full mx-auto max-w-[2000px]">
         {/*Desktop Nav*/}
-        <nav className="flex items-center justify-end p-6 lg:px-8" aria-label="Global">
+        <nav className="flex items-center justify-end lg:grid lg:grid-cols-12 lg:justify-between p-6 lg:px-8" aria-label="Global">
           {/*Nav Logo*/}
-          <div className="hidden lg:flex lg:flex-1">
-            <div className="-m-1.5 p-1.5">
-              <img src={logo} alt="logo" className="h-14 w-auto text-blue-500 hover:animate-pulse" />
-            </div>
+          <div className='col-span-3'>
+            <img src={logo} alt="logo" className="hidden lg:block h-14 w-auto text-blue-500 hover:animate-pulse" />
           </div>
 
+          {/*Nav Menu Buttons */}
+          <div className="col-span-6 hidden lg:flex lg:gap-x-12 font-agency-fb justify-center w-full">
+            {navigation.map((item) => (
+                <a
+                  className=' text-2xl py-2 px-3 rounded-lg font-semibold leading-6 text-zinc-700 transition-all duration-200 ease-linear hover:bg-gray-100'
+                  href={item.href}
+                  key={item.id}
+                >
+                    {item.name.toUpperCase()}
+                </a> 
+            ))}
+          </div>
+
+          {/*Extra Menu Button */}
+          <div className="col-span-3 hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:align-middle">
+            <a href="https://drive.google.com/u/0/uc?id=1GJB7UXpkn5vzb5zNEDl5WaW1Lp5BUcML&export=download" target="_blank" rel="noreferrer" className="Btn bg-yellow-400 hover:bg-yellow-300 rounded-lg group">
+              <div className="sign">
+                <FiDownloadCloud className="h-6 w-6 text-zinc-950"/>
+              </div>
+              <div className="text text-md ">Download my CV</div>
+            </a>
+          </div>
+
+          
           {/*Burger Menu Button */}
           <div className="flex lg:hidden">
             <button
@@ -35,30 +59,6 @@ const Navbar = ({mobileMenuOpen, setMobileMenuOpen}) => {
               <span className="sr-only">Open main menu</span>
               <FaBars className="h-6 w-6" aria-hidden="true" />
             </button>
-          </div>
-
-          {/*Nav Menu Buttons */}
-          <div className="hidden lg:flex lg:gap-x-12 font-agency-fb">
-            {navigation.map((item) => (
-                <a
-                  className=' text-2xl py-2 px-3 rounded-lg font-semibold leading-6 text-zinc-700 transition-all duration-200 ease-linear hover:bg-gray-100'
-                  href={item.href}
-                  key={item.id}
-                  onClick={() => setMobileMenuOpen(true)}
-                >
-                    {item.name.toUpperCase()}
-                </a> 
-            ))}
-          </div>
-
-          {/*Extra Menu Button */}
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:align-middle">
-            <a href="https://drive.google.com/u/0/uc?id=1GJB7UXpkn5vzb5zNEDl5WaW1Lp5BUcML&export=download" target="_blank" rel="noreferrer" className="Btn bg-none hover:bg-yellow-400 rounded-lg group">
-              <div className="sign">
-                <FiDownloadCloud className="h-6 w-6 text-blue-500 group-hover:text-zinc-950"/>
-              </div>
-              <div className="text text-md ">Download my CV</div>
-            </a>
           </div>
         </nav>
 
@@ -102,4 +102,4 @@ const Navbar = ({mobileMenuOpen, setMobileMenuOpen}) => {
   )
 }
 
-export default Navbar
+export default Header

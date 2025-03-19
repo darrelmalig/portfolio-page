@@ -1,6 +1,41 @@
 import React from 'react'
+import Tooltip from './common/Tooltip'
+import headerHero from '../Assets/Images/Portfolio-Hero-Image.png'
+import { DiHtml5, DiJavascript1, DiCss3, DiGit, DiGithubBadge, DiReact } from "react-icons/di"
+import { SiTailwindcss  } from "react-icons/si"
 
-const HeroSection = ({headerHero, techStackItems}) => {
+const techStackItems = [
+    {
+      icon: <DiHtml5 className="techIcon" />,
+      name: 'HTML5',
+    },
+    {
+      icon: <DiCss3 className="techIcon" />,
+      name: 'CSS3',
+    },
+    {
+      icon: <DiJavascript1 className="techIcon" />,
+      name: 'JavaScript',
+    },
+    {
+      icon: <DiReact className="techIcon" />,
+      name: 'React',
+    },
+    {
+      icon: <SiTailwindcss className="techIcon" />,
+      name: 'Tailwind',
+    },
+    {
+      icon: <DiGit className="techIcon" />,
+      name: 'Git',
+    },
+    {
+      icon: <DiGithubBadge className="techIcon" />,
+      name: 'GitHub',
+    },
+  ];
+
+const HeroSection = () => {
   return (
     <section className="flex mx-auto w-full max-w-[2000px] min-h-[950px] md:px-6 ">
       <div className="flex flex-col-reverse gap-y-2 py-5 pb-10 w-full justify-center items-center align-middle lg:pb-5 lg:flex-row lg:gap-0 lg:justify-between">
@@ -21,7 +56,9 @@ const HeroSection = ({headerHero, techStackItems}) => {
           </p>
           <div id="techStack" className=" text-slate-500 pt-3 flex flex-row gap-x-1">
             {techStackItems.map((item, index) => (
-              <React.Fragment key={index}>{item.icon}</React.Fragment>
+              <React.Fragment key={index}>
+                <Tooltip text={item.name} element={item.icon}  />
+              </React.Fragment>
             ))}
           </div>
           <div id="ctaButtons" className='mt-4'>

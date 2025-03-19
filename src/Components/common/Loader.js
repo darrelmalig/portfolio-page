@@ -1,5 +1,5 @@
 import React from 'react'
-import './Loader.css'
+import '../../Styles/Loader.css'
 
 const Loader = () => {
   return (
@@ -192,7 +192,7 @@ const Loader = () => {
 				<div className="hex-brick h2"></div>
 				<div className="hex-brick h3"></div>
 			</div>
-		</div>
+	</div>
 	</section>
   )
 }

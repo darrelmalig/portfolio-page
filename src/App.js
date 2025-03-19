@@ -1,39 +1,20 @@
 import './App.css'
-import Home from './Components/Home/Home'
-import Navbar from './Components/Navbar/Navbar'
-import { useState } from 'react'
-import { ToastContainer, toast } from 'react-toastify'
+import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import Header from './Components/Header'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import PortfolioPage from "./Pages/PortfolioPage"
 
 function App() {
-
-  /*Toastify Notifs*/
-  const notifySentMessage = () => {
-    toast.success("Your message has been sent!", {
-      position: toast.POSITION.TOP_CENTER
-    });
-  };
-  
-  const [pageReady, setPageReady] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const pageIsReady = (status) => {
-    setPageReady(status);
-  }
+    
+  AOS.init();
 
   return (
     <>
       <main>
-        <Navbar
-          mobileMenuOpen={mobileMenuOpen}
-          setMobileMenuOpen={setMobileMenuOpen}
-        />
-        <Home 
-          mobileMenuOpen={mobileMenuOpen}
-          pageReady={pageReady}
-          pageIsReady={pageIsReady}
-          notifySentMessage={notifySentMessage}
-        />
+        <Header />
+        <PortfolioPage />
       </main>
       <ToastContainer />
     </>
