@@ -171,3 +171,11 @@ html{
 .projectCard{
   @apply text-white flex justify-end items-end bg-cover bg-no-repeat bg-center w-80 h-80 rounded-lg transition-all ease-in-out duration-500 overflow-hidden shadow-md drop-shadow-md  shadow-slate-500 relative
 }
+
+.navLinks{
+  @apply  text-2xl py-2 px-3 rounded-lg font-semibold leading-6 text-zinc-700 transition-all duration-200 ease-linear hover:bg-gray-100
+}
+
+.mobileNavLinks{
+  @apply -mx-3 block py-2 px-3 text-lg rounded-lg font-semibold leading-7 text-zinc-700 transition-all duration-200 ease-linear hover:bg-gray-100
+}

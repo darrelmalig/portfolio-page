@@ -22,8 +22,9 @@ const ContactForm = () => {
         setMessage('');
     }
 
+
   return (
-    <section id="contact" data-aos="fade-up" className="flex justify-center w-full px-3 lg:px-5 py-3 pt-12">
+    <section id="contact" data-aos="fade-up" className="flex justify-center w-full px-3 lg:px-5 py-3 pt-12 lg:pt-32">
       <div className=" flex flex-col justify-center items-center align-middle h-auto w-full max-w-7xl px-5 py-10 md:py-16 magicpattern rounded-lg md:rounded-xl lg:rounded-2xl ">
         <div className="mx-auto text-center w-full max-w-xl">
           <h3 className="text-white text-center text-2xl md:text-3xl font-bold">Let's build something great together!</h3>

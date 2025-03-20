@@ -8,12 +8,14 @@ import logo from '../../Assets/Images/Logo-3.png'
 const Header = () => {
 
   const navigation = [
-    { name: 'About', routePath: "/", href:"/#about" , id:1},
-    { name: 'Projects', routePath: "/", href:"/#projects" , id:2},
-    { name: 'Contact', routePath: "/", href:"/#contact" , id:3}
+    { name: 'About',  href:"/#about" },
+    { name: 'Projects',  href:"/#projects"},
+    { name: 'Contact',  href:"/#contact" }
   ]
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  
 
   return (
     <>
@@ -27,21 +29,21 @@ const Header = () => {
 
           {/*Nav Menu Buttons */}
           <div className="col-span-6 hidden lg:flex lg:gap-x-12 font-agency-fb justify-center w-full">
-            {navigation.map((item) => (
+            {navigation.map((nav, index) => (
                 <a
-                  className=' text-2xl py-2 px-3 rounded-lg font-semibold leading-6 text-zinc-700 transition-all duration-200 ease-linear hover:bg-gray-100'
-                  href={item.href}
-                  key={item.id}
-                  data-testid={`nav-desktop-${item.name}`}
+                  className="navLinks"
+                  href={nav.href}
+                  key={index}
+                  data-testid={`nav-desktop-${nav.name}`}
                 >
-                    {item.name.toUpperCase()}
+                    {nav.name.toUpperCase()}
                 </a> 
             ))}
           </div>
 
           {/*Extra Menu Button */}
           <div className="col-span-3 hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:align-middle">
-            <a href="https://drive.google.com/u/0/uc?id=1GJB7UXpkn5vzb5zNEDl5WaW1Lp5BUcML&export=download" target="_blank" rel="noreferrer" className="Btn bg-yellow-400 hover:bg-yellow-300 rounded-lg group">
+            <a href="https://drive.google.com/u/0/uc?id=1GJB7UXpkn5vzb5zNEDl5WaW1Lp5BUcML&export=download" target="_blank" rel="noopener noreferrer" className="Btn bg-yellow-400 hover:bg-yellow-300 rounded-lg group">
               <div className="sign">
                 <FiDownloadCloud className="h-6 w-6 text-zinc-950"/>
               </div>
@@ -83,15 +85,15 @@ const Header = () => {
                 <div className="mt-5 flow-root">
                 <div className="-my-3">
                     <div className="space-y-2 py-6 font-agency-fb">
-                    {navigation.map((item) => (      
+                    {navigation.map((nav, index) => (      
                         <a
-                          className="-mx-3 block py-2 px-3 text-lg rounded-lg font-semibold leading-7 text-zinc-700 transition-all duration-200 ease-linear hover:bg-gray-100"
-                          href={item.href}
-                          key={item.id}
-                          data-testid={`nav-mobile-${item.name}`}
+                          className="mobileNavLinks"
+                          href={nav.href}
+                          key={index}
+                          data-testid={`nav-mobile-${nav.name}`}
                           onClick={() => setMobileMenuOpen(false)}
                         >
-                            {item.name.toUpperCase()}
+                            {nav.name.toUpperCase()}
                         </a> 
                     ))}
                     </div>

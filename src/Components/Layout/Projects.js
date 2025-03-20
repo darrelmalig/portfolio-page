@@ -8,126 +8,56 @@ import { DiHtml5, DiJavascript1, DiCss3, DiGithubBadge, DiReact, DiWordpress } f
 import { SiAdobeillustrator, SiAdobephotoshop, SiTailwindcss, SiGamemaker  } from "react-icons/si"
 import { AiFillApi } from "react-icons/ai"
 
-const projects = 
-[
+// Define project technology icons in a separate object for reusability
+const techIcons = {
+  Gamemaker: <SiGamemaker className="techIconLight" />,
+  Photoshop: <SiAdobephotoshop className="techIconLight" />,
+  Illustrator: <SiAdobeillustrator className="techIconLight" />,
+  HTML5: <DiHtml5 className="techIconLight" />,
+  CSS3: <DiCss3 className="techIconLight" />,
+  Tailwind: <SiTailwindcss className="techIconLight" />,
+  React: <DiReact className="techIconLight" />,
+  Github: <DiGithubBadge className="techIconLight" />,
+  API: <AiFillApi className="techIconLight" />,
+  Javascript: <DiJavascript1 className="techIconLight" />,
+  Wordpress: <DiWordpress className="techIconLight" />,
+};
+
+// Define projects data
+const projects = [
   {
     projectName: "DaMath",
     projectDesc: "DaMath is a mobile board game that I created for my Capstone project in college.",
     projectLink: "https://drive.google.com/drive/folders/1l-br0WG6LzjhUI0BlgCokvihmqE-WELM?usp=sharing",
     projectImage: DaMath,
-    projectTech: [
-      { 
-        name: 'Gamemaker',
-        icon: <SiGamemaker className="techIconLight" />,
-      },
-      { 
-        name: 'Photoshop',
-        icon: <SiAdobephotoshop className="techIconLight" />,
-      },
-      { 
-        name: 'Illustrator',
-        icon: <SiAdobeillustrator className="techIconLight" />,
-      },
-    ],
-    isLive: true
+    projectTech: ['Gamemaker', 'Photoshop', 'Illustrator'],
+    isLive: true,
   },
   {
     projectName: "Dota2 Heroes",
     projectDesc: "Cloned Dota 2 Heroes page that uses the Opendota API to fetch/request data.",
     projectLink: "https://dota-2-heroes.netlify.app/",
     projectImage: Dota2Heroes,
-    projectTech: [
-      { 
-        name: 'HTML5',
-        icon: <DiHtml5 className="techIconLight" />,
-      },
-      {
-        name: 'CSS3',
-        icon: <DiCss3 className="techIconLight" />,
-      },
-      {
-        name: 'Tailwind',
-        icon: <SiTailwindcss className="techIconLight" />,
-      },
-      {
-        name: 'React.js',
-        icon: <DiReact className="techIconLight" />,
-      },
-      {
-        name: 'Github',
-        icon: <DiGithubBadge className="techIconLight" />,
-      },
-      {
-        name: 'API',
-        icon: <AiFillApi className="techIconLight" />,
-      },
-    ],
-    isLive: true
+    projectTech: ['HTML5', 'CSS3', 'Tailwind', 'React', 'Github', 'API'],
+    isLive: true,
   },
   {
     projectName: "Lifelabrynth",
-    projectDesc: "A static web page that is created using Wordpress + Elementor",
+    projectDesc: "A static web page that is created using Wordpress + Elementor.",
     projectLink: "https://darrelmalig.github.io/lifelabyrinth/",
     projectImage: Lifelabrynth,
-    projectTech: [
-      { 
-        name: 'HTML5',
-        icon: <DiHtml5 className="techIconLight" />,
-      },
-      {
-        name: 'CSS3',
-        icon: <DiCss3 className="techIconLight" />,
-      },
-      {
-        name: 'Javascript',
-        icon: <DiJavascript1 className="techIconLight" />,
-      },
-      {
-        name: 'Wordpress',
-        icon: <DiWordpress className="techIconLight" />,
-      },
-      { 
-        name: 'Github',
-        icon: <DiGithubBadge className="techIconLight" />,
-      },
-    ],
-    isLive: true
+    projectTech: ['HTML5' , 'CSS3', 'Javascript', 'Wordpress', 'Github'],
+    isLive: true,
   },
   {
     projectName: "Pokedex",
-    projectDesc: "A Web Pokedex page where you can browse and check data of pokemons from all generations",
+    projectDesc: "A Web Pokedex page where you can browse and check data of pokemons from all generations.",
     projectLink: "#projects",
     projectImage: Pokedex,
-    projectTech: [
-      { 
-        name: 'HTML5',
-        icon: <DiHtml5 className="techIconLight" />,
-      },
-      {
-        name: 'CSS3',
-        icon: <DiCss3 className="techIconLight" />,
-      },
-      {
-        name: 'Tailwind',
-        icon: <SiTailwindcss className="techIconLight" />,
-      },
-      {
-        name: 'React.js',
-        icon: <DiReact className="techIconLight" />,
-      },
-      {
-        name: 'Github',
-        icon: <DiGithubBadge className="techIconLight" />,
-      },
-      {
-        name: 'API',
-        icon: <AiFillApi className="techIconLight" />,
-      },
-    ],
-    isLive: false
-  }
+    projectTech: ['HTML5', 'CSS3', 'Tailwind', 'React', 'Github', 'API'],
+    isLive: false,
+  },
 ];
-
 
 const Projects = () => {
   return (
@@ -139,12 +69,9 @@ const Projects = () => {
 
         <div data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-sine" className="max-w-7xl py-5 pt-10">
           <ul className="flex flex-wrap flex-row gap-5 justify-center items-center align-middle ">
-            {
-              projects.map((project, index) => (
-                <ProjectCard key={index} project={project} />
-                
-              ))
-            }
+            {projects.map((project, index) => (
+              <ProjectCard key={index} project={{ ...project, projectTech: project.projectTech.map(tech => ({ name: tech, icon: techIcons[tech] })) }} />
+            ))}
           </ul>
         </div>
       </section>
