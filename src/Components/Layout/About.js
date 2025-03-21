@@ -60,9 +60,12 @@ import aboutMeImage from '../../Assets/Images/Portfolio-Body-Image.png'
 
   const bioContent = "I am a Front-end Web Developer with a strong focus on creating dynamic web applications. I streamline development by building reusable components, crafting responsive interfaces, and implementing SEO best practices. My experience includes developing and maintaining websites, designing responsive email templates, and creating engaging visual assets. I strive to improve user interactions and optimize the performance of websites."
 
-const About = () => {
+const About = React.forwardRef((props, ref) => {
+
+  const aboutRef = ref;
+
   return (
-    <section className="bg-blue-600 magicpattern flex justify-center align-middle items-center w-full min-h-[800px]">
+    <section ref={aboutRef} className="bg-blue-600 magicpattern flex justify-center align-middle items-center w-full min-h-[800px]">
         <div id="about" className="flex flex-col gap-5 gap-y-10 px-4 py-12  h-full w-full justify-center items-center align-middle max-w-[2000px] mx-auto lg:flex-row lg:py-32">
           <div data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-sine" className="flex w-full justify-center items-center align-middle px-10 lg:px-1 lg:max-w-3xl lg:w-1/3">
             <img src={aboutMeImage} alt="Portrait of Darrel Malig" className=" drop-shadow-xl drop rounded-xl w-full max-w-sm lg:max-w-lg" />
@@ -98,6 +101,6 @@ const About = () => {
         </div>
       </section>
   )
-}
+});
 
 export default About

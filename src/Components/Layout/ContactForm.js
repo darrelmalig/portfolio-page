@@ -3,7 +3,9 @@ import emailJs from '@emailjs/browser'
 import { FiSend } from  'react-icons/fi'
 import { useSuccessToast } from '../../Hooks/useToastNotification'
 
-const ContactForm = () => {
+const ContactForm = React.forwardRef((props, ref) => {
+
+    const contactRef = ref;
 
     const successToast = useSuccessToast();
 
@@ -24,7 +26,7 @@ const ContactForm = () => {
 
 
   return (
-    <section id="contact" data-aos="fade-up" className="flex justify-center w-full px-3 lg:px-5 py-3 pt-12 lg:pt-32">
+    <section ref={contactRef} id="contact" data-aos="fade-up" className="flex justify-center w-full px-3 lg:px-5 py-3 pt-12 lg:pt-32">
       <div className=" flex flex-col justify-center items-center align-middle h-auto w-full max-w-7xl px-5 py-10 md:py-16 magicpattern rounded-lg md:rounded-xl lg:rounded-2xl ">
         <div className="mx-auto text-center w-full max-w-xl">
           <h3 className="text-white text-center text-2xl md:text-3xl font-bold">Let's build something great together!</h3>
@@ -83,6 +85,6 @@ const ContactForm = () => {
       </div>
     </section>
   )
-}
+})
 
 export default ContactForm

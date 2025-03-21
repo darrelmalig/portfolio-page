@@ -2,7 +2,7 @@ import React from 'react'
 import Tooltip from './Tooltip'
 
 const ProjectCard = ({project}) => {
-  console.log(project)
+  
   return (
     <a href={project.projectLink} target={`${project.isLive ? "_blank" : ""}`} rel="noreferrer" className={`${project.isLive ? "cursor-pointer" : "cursor-not-allowed"}`}>
         <li style={{ backgroundImage: `url(${project.projectImage})` }} className="projectCard group " >

@@ -59,9 +59,13 @@ const projects = [
   },
 ];
 
-const Projects = () => {
+
+const Projects = React.forwardRef((props, ref) => {
+
+  const projectsRef = ref;
+  
   return (
-    <section id="projects" className="projects flex flex-col p-5 py-12 items-center justify-center mx-auto w-full max-w-[2000px] min-h-[800px] lg:py-32 h-full">
+    <section ref={projectsRef} id="projects" className="projects flex flex-col p-5 py-12 items-center justify-center mx-auto w-full max-w-[2000px] min-h-[800px] lg:py-32 h-full">
         <div data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-sine" className="flex flex-col justify-center align-middle items-center gap-2 max-w-2xl">
           <h3 className="text-4xl text-zinc-700 text-center font-bold" >My Projects</h3>
           <p className="text-md sm:text-lg text-center text-zinc-700 py-1 sm:py-4"> Here are some of the projects I've worked on.</p>
@@ -76,6 +80,6 @@ const Projects = () => {
         </div>
       </section>
   )
-}
+})
 
 export default Projects
