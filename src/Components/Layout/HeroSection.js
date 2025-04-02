@@ -1,6 +1,6 @@
 import React from 'react'
 import Tooltip from '../common/Tooltip'
-import headerHero from '../../Assets/Images/Portfolio-Hero-Image.png'
+import headerHero from '../../Assets/Images/Portfolio-Hero-Image.webp'
 import { DiHtml5, DiJavascript1, DiCss3, DiGit, DiGithubBadge, DiReact } from "react-icons/di"
 import { SiTailwindcss  } from "react-icons/si"
 
