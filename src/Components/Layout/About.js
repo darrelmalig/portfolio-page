@@ -89,7 +89,7 @@ const About = React.forwardRef((props, ref) => {
             </div>
             
             <div className="flex justify-end w-full rounded-b-xl bg-[#0F172A]">
-              <a href="https://drive.google.com/u/0/uc?id=1GJB7UXpkn5vzb5zNEDl5WaW1Lp5BUcML&export=download" target="_blank" rel="noopener noreferrer" className="Btn bg-yellow-400 hover:bg-yellow-300 rounded-xl rounded-tr-none rounded-bl-none transition-all ease-in-out duration-300  group">
+              <a href="https://drive.google.com/u/0/uc?id=1VjD4goE0yzqkL6bCBbGG3qMy611-YHsY&export=download" target="_blank" rel="noopener noreferrer" className="Btn bg-yellow-400 hover:bg-yellow-300 rounded-xl rounded-tr-none rounded-bl-none transition-all ease-in-out duration-300  group">
                 <div className="sign">
                   <FiDownloadCloud className="h-6 w-6"/>
                 </div>

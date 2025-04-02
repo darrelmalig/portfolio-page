@@ -12,7 +12,7 @@ function App() {
   AOS.init();
 
   const [showContent, setShowContent] = useState(false);
-  const isTimerComplete = useTimer(2500); // Use the custom hook with a 3-second delay
+  const isTimerComplete = useTimer(4500); // Use the custom hook with a 3-second delay
 
   // Update the state when the timer is complete
   if (isTimerComplete && !showContent) {
