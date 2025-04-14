@@ -51,8 +51,8 @@ const HeroSection = () => {
             FRONT-END DEVELOPER
           </h2>
           <p className=" text-lg mt-2 text-zinc-700 max-w-3xl lg:max-w-none ">
-            My Happy Place: Coding and Designing Simple, Amazing Things for the
-            Web.
+            My happy place: coding and designing simple, amazing things for the
+            web.
           </p>
           <div id="techStack" className=" text-slate-500 pt-3 flex flex-row gap-x-1">
             {techStackItems.map((item, index) => (

@@ -1,11 +1,11 @@
 import React from 'react'
 import DaMath from '../../Assets/Images/DaMath.webp'
-import Dota2Heroes from '../../Assets/Images/Dota-2-Heroes.png'
-import Pokedex from '../../Assets/Images/Pokedex.png'
+import Dota2Heroes from '../../Assets/Images/Dota-2-Heroes.webp'
+import ChatApp from '../../Assets/Images/DM-Chat-App.webp'
 import Lifelabrynth from '../../Assets/Images/Lifelabrynth.png'
 import ProjectCard from '../common/ProjectCard'
-import { DiHtml5, DiJavascript1, DiCss3, DiGithubBadge, DiReact, DiWordpress } from "react-icons/di"
-import { SiAdobeillustrator, SiAdobephotoshop, SiTailwindcss, SiGamemaker  } from "react-icons/si"
+import { DiHtml5, DiJavascript1, DiCss3, DiGithubBadge, DiReact, DiWordpress, DiMongodb, DiNodejs } from "react-icons/di"
+import { SiAdobeillustrator, SiAdobephotoshop, SiTailwindcss, SiGamemaker, SiExpress, SiSocketdotio, SiDaisyui, SiJsonwebtokens,SiCloudinary,SiGit } from "react-icons/si"
 import { AiFillApi } from "react-icons/ai"
 
 // Define project technology icons in a separate object for reusability
@@ -21,16 +21,24 @@ const techIcons = {
   API: <AiFillApi className="techIconLight" />,
   Javascript: <DiJavascript1 className="techIconLight" />,
   Wordpress: <DiWordpress className="techIconLight" />,
+  Mongodb: <DiMongodb className="techIconLight" />,
+  Express: <SiExpress className="techIconLight" />,
+  Node: <DiNodejs className="techIconLight" />,
+  SocketIO: <SiSocketdotio className="techIconLight" />,
+  DaisyUI: <SiDaisyui className="techIconLight" />,
+  Cloudinary: <SiCloudinary  yui className="techIconLight" />,
+  JWT: <SiJsonwebtokens className="techIconLight" />,
+  Git: <SiGit className="techIconLight" />,
 };
 
 // Define projects data
 const projects = [
   {
-    projectName: "DaMath",
-    projectDesc: "DaMath is a mobile board game that I created for my Capstone project in college.",
-    projectLink: "https://drive.google.com/drive/folders/1l-br0WG6LzjhUI0BlgCokvihmqE-WELM?usp=sharing",
-    projectImage: DaMath,
-    projectTech: ['Gamemaker', 'Photoshop', 'Illustrator'],
+    projectName: "Chat app",
+    projectDesc: "A chat app where you can register and login and send messages and images realtime",
+    projectLink: "http://dm-chat-app-jhis.onrender.com/",
+    projectImage: ChatApp,
+    projectTech: ['Mongodb', 'Express', 'React', 'Node', 'SocketIO', 'Cloudinary', 'JWT', 'API', 'Tailwind', 'DaisyUI', 'HTML5', 'CSS3', 'Git', 'Github'],
     isLive: true,
   },
   {
@@ -38,7 +46,7 @@ const projects = [
     projectDesc: "Cloned Dota 2 Heroes page that uses the Opendota API to fetch/request data.",
     projectLink: "https://dota-2-heroes.netlify.app/",
     projectImage: Dota2Heroes,
-    projectTech: ['HTML5', 'CSS3', 'Tailwind', 'React', 'Github', 'API'],
+    projectTech: ['HTML5', 'CSS3', 'Tailwind', 'React', 'API', 'Git', 'Github' ],
     isLive: true,
   },
   {
@@ -50,12 +58,12 @@ const projects = [
     isLive: true,
   },
   {
-    projectName: "Pokedex",
-    projectDesc: "A Web Pokedex page where you can browse and check data of pokemons from all generations.",
-    projectLink: "#projects",
-    projectImage: Pokedex,
-    projectTech: ['HTML5', 'CSS3', 'Tailwind', 'React', 'Github', 'API'],
-    isLive: false,
+    projectName: "DaMath",
+    projectDesc: "DaMath is a mobile board game that I created for my Capstone project in college.",
+    projectLink: "https://drive.google.com/drive/folders/1l-br0WG6LzjhUI0BlgCokvihmqE-WELM?usp=sharing",
+    projectImage: DaMath,
+    projectTech: ['Gamemaker', 'Photoshop', 'Illustrator'],
+    isLive: true,
   },
 ];
 
@@ -71,8 +79,8 @@ const Projects = React.forwardRef((props, ref) => {
           <p className="text-md sm:text-lg text-center text-zinc-700 py-1 sm:py-4"> Here are some of the projects I've worked on.</p>
         </div>
 
-        <div data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-sine" className="max-w-7xl py-5 pt-10">
-          <ul className="flex flex-wrap flex-row gap-5 justify-center items-center align-middle ">
+        <div data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-sine" className="max-w-7xl py-5 md:pt-10">
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-5 justify-center items-center align-middle ">
             {projects.map((project, index) => (
               <ProjectCard key={index} project={{ ...project, projectTech: project.projectTech.map(tech => ({ name: tech, icon: techIcons[tech] })) }} />
             ))}
